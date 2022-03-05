@@ -6,19 +6,19 @@ html
     meta name="viewport" content="width=device-width"
     = csrf_meta_tags
     = csp_meta_tag
+
+    / Modaal
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.css"
+
+    / 伊勢湾カップのためのスタイルシート
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
 
     = javascript_importmap_tags
 
     / jQuery
     script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-
-    / Magnific Popup 写真をクリックして拡大、ギャラリー機能
-    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-    script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
-
-    = javascript_include_tag "magnific-popup-custom"
-    = stylesheet_link_tag "magnific-popup-custom", "data-turbo-track": "reload"
+    / Modaal
+    script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"
 
     / Smooth Scroll ページ内リンクをクリックすると滑らかにスクロールする
     script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"

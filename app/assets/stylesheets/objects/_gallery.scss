@@ -1,0 +1,16 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+  gap: 10px;
+  img {
+    max-width: 100%;
+    vertical-align: bottom;
+  }
+}
+
+.modaal-inner-wrapper {
+  padding: 0 !important;
+  .modaal-video-wrap {
+    margin: 10px !important;
+  }
+}

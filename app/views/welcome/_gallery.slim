@@ -1,0 +1,50 @@
+h2.ui.header#gallery
+  | 写真
+
+.ui.blue.segment.gallery
+  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+    = image_tag "tora_s.webp"
+  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+    = image_tag "tora_s.webp"
+  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+    = image_tag "tora_s.webp"
+  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+    = image_tag "tora_s.webp"
+  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+    = image_tag "tora_s.webp"
+  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+    = image_tag "tora_s.webp"
+  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+    = image_tag "tora_s.webp"
+  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+    = image_tag "tora_s.webp"
+  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+    = image_tag "tora_s.webp"
+  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+    = image_tag "tora_s.webp"
+  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+    = image_tag "tora_s.webp"
+
+h2.ui.header
+  | 動画
+
+css:
+  .modaal-inner-wrapper {
+    padding: 0 !important;
+  }
+  .modaal-video-wrap {
+    margin: 10px !important;
+  }
+
+
+.ui.blue.segment.gallery
+  = link_to "https://player.vimeo.com/video/142216434", data: { group: "movie", modaal_desc: "Test movie"}, class: "movie"
+    = image_tag "tsuru_s.webp"
+
+javascript:
+  $('.photo').modaal({
+    type: 'image'
+  });
+  $('.movie').modaal({
+    type: 'video'
+  });
