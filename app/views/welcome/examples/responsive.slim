@@ -1,0 +1,596 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title
+      | Responsive Elements - Semantic
+    link rel="stylesheet" type="text/css" href="../dist/semantic.css"
+    script src="assets/library/jquery.min.js"
+    script src="../dist/semantic.js"
+  body
+    h1.ui.center.aligned.header
+      | Responsive UI Examples
+    h2.ui.center.aligned.header
+      | Basic Responsive
+    h3.ui.center.aligned.header
+      | Container
+    .ui.container
+      .ui.segments
+        .ui.segment
+          | Content
+        .ui.segment
+          | Content
+        .ui.segment
+          | Content
+        .ui.segment
+          | Content
+    h3.ui.center.aligned.header
+      | Text Container
+    .ui.text.container
+      .ui.segments
+        .ui.segment
+          | Content
+        .ui.segment
+          | Content
+        .ui.segment
+          | Content
+        .ui.segment
+          | Content
+    h3.ui.center.aligned.header
+      | Stackable Grid
+    .ui.two.column.stackable.grid
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .three.column.row
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+      .ten.wide.column
+        .ui.segment
+          | Content
+      .six.wide.column
+        .ui.segment
+          | Content
+    h3.ui.center.aligned.header
+      | Doubling Grid
+    .ui.three.column.doubling.grid
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+    h3.ui.center.aligned.header
+      | Doubling Stackable Grid
+    .ui.three.column.doubling.stackable.grid
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+    h3.ui.center.aligned.header
+      | Nested Stackable Grid
+    .ui.two.column.grid
+      .column
+        .ui.stackable.doubling.two.column.grid
+          .column
+            .ui.segment
+              | Content
+          .column
+            .ui.segment
+              | Content
+      .column
+        .ui.stackable.doubling.three.column.grid
+          .column
+            .ui.segment
+              | Content
+          .column
+            .ui.segment
+              | Content
+          .column
+            .ui.segment
+              | Content
+    h3.ui.center.aligned.header
+      | Stackable Grid Container
+    .ui.two.column.stackable.grid.container
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+    h3.ui.center.aligned.header
+      | Doubling Grid Container
+    .ui.three.column.doubling.grid.container
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+    h3.ui.center.aligned.header
+      | Doubling Stackable Grid Container
+    .ui.three.column.doubling.stackable.grid.container
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+    h2.ui.center.aligned.header
+      | Device Adjustment
+    h3.ui.center.aligned.header
+      | Device Column Width
+    .ui.grid
+      .three.wide.computer.nine.wide.tablet.six.wide.mobile.column
+        .ui.segment
+          | Content
+      .four.wide.column
+        .ui.segment
+          | Content
+      .nine.wide.computer.three.wide.tablet.six.wide.mobile.column
+        .ui.segment
+          | Content
+      .nine.wide.computer.three.wide.tablet.six.wide.mobile.column
+        .ui.segment
+          | Content
+      .four.wide.column
+        .ui.segment
+          | Content
+      .three.wide.computer.nine.wide.tablet.six.wide.mobile.column
+        .ui.segment
+          | Content
+    h3.ui.center.aligned.header
+      | Device Visibility
+    .ui.four.column.grid
+      .widescreen.only.ten.wide.column
+        .ui.segment
+          | Widescreen
+      .widescreen.only.six.wide.column
+        .ui.segment
+          | Widescreen
+      .large.screen.only.six.wide.column
+        .ui.segment
+          | Large Screen
+      .large.screen.only.ten.wide.column
+        .ui.segment
+          | Large Screen
+      .tablet.only.mobile.only.eight.wide.column
+        .ui.segment
+          | Tablet and Mobile
+      .tablet.only.mobile.only.eight.wide.column
+        .ui.segment
+          | Tablet and Mobile
+      .mobile.only.sixteen.wide.column
+        .ui.segment
+          | Mobile
+      .computer.only.two.column.row
+        .column
+          .ui.segment
+            | Computer and Up
+        .column
+          .ui.segment
+            | Computer and Up
+      .tablet.only.column
+        .ui.segment
+          | Tablet Only Content
+      .tablet.only.column
+        .ui.segment
+          | Tablet Only Content
+      .tablet.only.column
+        .ui.segment
+          | Tablet Only Content
+      .tablet.only.column
+        .ui.segment
+          | Tablet Only Content
+    h2.ui.center.aligned.header
+      | Responsive Grid with Variations
+    h3.ui.center.aligned.header
+      | Stackable Divided Grid
+    .ui.stackable.two.column.divided.grid.container
+      .row
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+      .row
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+      .row
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+    h3.ui.center.aligned.header
+      | Stackable Vertically Divided Grid
+    .ui.stackable.two.column.vertically.divided.grid.container
+      .row
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+      .row
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+      .row
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+    h3.ui.center.aligned.header
+      | Celled Stackable Grid
+    .ui.stackable.celled.grid.container
+      .two.column.row
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+      .three.column.row
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+      .two.column.row
+        .column
+          .ui.segment
+            | Content
+        .column
+          .ui.segment
+            | Content
+    h3.ui.center.aligned.header
+      | Consecutive Doubling Stackable Grid
+    .doubling.stackable.three.column.ui.grid.container
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+    .doubling.stackable.three.column.ui.grid.container
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+    h3.ui.center.aligned.header
+      | Grid Container
+    .ui.three.column.grid.container
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+      .column
+        .ui.segment
+          | Content
+    h1.ui.center.aligned.header
+      | Responsive Elements
+    h3.ui.center.aligned.header
+      | Responsive Vertical Divider
+    .ui.stackable.two.column.very.relaxed.grid.container style="position:relative;"
+      .column
+        .ui.segment
+          | Content
+      .ui.vertical.divider
+        |  Or
+      .column
+        .ui.segment
+          | Content
+    h3.ui.center.aligned.header
+      | Responsive Table
+    .ui.container
+      table.ui.celled.table
+        thead
+          th
+            | Employee
+          th
+            | Correct Guesses
+        tbody
+          tr
+            td
+              h4.ui.image.header
+                img.ui.mini.rounded.image src="assets/images/wireframe/square-image.png"
+              .content
+                |  Lena
+                .sub.header
+                  | Human Resources
+            td
+              |  22
+          tr
+            td
+              h4.ui.image.header
+                img.ui.mini.rounded.image src="assets/images/wireframe/square-image.png"
+              .content
+                |  Matthew
+                .sub.header
+                  | Fabric Design
+            td
+              |  15
+          tr
+            td
+              h4.ui.image.header
+                img.ui.mini.rounded.image src="assets/images/wireframe/square-image.png"
+              .content
+                |  Lindsay
+                .sub.header
+                  | Entertainment
+            td
+              |  12
+          tr
+            td
+              h4.ui.image.header
+                img.ui.mini.rounded.image src="assets/images/wireframe/square-image.png"
+              .content
+                |  Mark
+                .sub.header
+                  | Executive
+            td
+              |  11
+    h3.ui.center.aligned.header
+      | Responsive Menu
+    .ui.stackable.container.menu
+      .item
+        img src="assets/images/logo.png"
+      a.item
+        | Features
+      a.item
+        | Testimonials
+      a.item
+        | Sign-in
+    h3.ui.center.aligned.header
+      | Responsive Item
+    .ui.container
+      .ui.relaxed.divided.items
+        .item
+          .ui.small.image
+            img src="assets/images/wireframe/image.png"
+          .content
+            a.header
+              | Content Header
+            .meta
+              a
+                | Date
+              a
+                | Category
+            .description
+              |  A description which may flow for several lines and give context to the content.
+            .extra
+              img.ui.circular.avatar.image src="assets/images/wireframe/square-image.png"
+              |  Username
+        .item
+          .ui.small.image
+            img src="assets/images/wireframe/image.png"
+          .content
+            a.header
+              | Content Header
+            .meta
+              a
+                | Date
+              a
+                | Category
+            .description
+              |  A description which may flow for several lines and give context to the content.
+            .extra
+              .ui.right.floated.primary.button
+                |  Primary
+                i.right.chevron.icon
+              .ui.label
+                | Limited
+        .item
+          .ui.small.image
+            img src="assets/images/wireframe/image.png"
+          .content
+            a.header
+              | Content Header
+            .meta
+              a
+                | Date
+              a
+                | Category
+            .description
+              |  A description which may flow for several lines and give context to the content.
+            .extra
+              .ui.right.floated.primary.button
+                |  Primary
+                i.right.chevron.icon
+    h3.ui.center.aligned.header
+      | Responsive Steps
+    .ui.last.container
+      .ui.three.steps
+        .step
+          .content
+            .title
+              | Shipping
+            .description
+              | Choose your shipping options
+        .active.step
+          .content
+            .title
+              | Billing
+            .description
+              | Enter billing information
+        .disabled.step
+          .content
+            .title
+              | Confirm Order
+            .description
+              | Review your order details
+    css:
+      .last.container {
+        margin-bottom: 300px !important;
+      }
+
+      h1.ui.center.header {
+        margin-top: 3em;
+      }
+
+      h2.ui.center.header {
+        margin: 4em 0em 2em;
+      }
+
+      h3.ui.center.header {
+        margin-top: 2em;
+        padding: 2em 0em;
+      }
+    javascript:
+      $(document).ready(function () {
+        var $headers = $('body > h3'),
+          $header = $headers.first(),
+          ignoreScroll = false,
+          timer;
+        // Preserve example in viewport when resizing browser
+        $(window).on('resize', function () {
+          // ignore callbacks from scroll change
+          clearTimeout(timer);
+          $headers.visibility('disable callbacks');
+          // preserve position
+          $(document).scrollTop($header.offset().top);
+          // allow callbacks in 500ms
+          timer = setTimeout(function () {
+            $headers.visibility('enable callbacks');
+          }, 500);
+        });
+        $headers.visibility({
+          // fire once each time passed
+          once: false,
+          // don't refresh position on resize
+          checkOnRefresh: true,
+          // lock to this element on resize
+          onTopPassed: function () {
+            $header = $(this);
+          },
+          onTopPassedReverse: function () {
+            $header = $(this);
+          }
+        });
+      });

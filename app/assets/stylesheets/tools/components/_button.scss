@@ -1,0 +1,53 @@
+@use "sass:map";
+
+// Variables
+$spacing-pc: 8px !default;
+$spacing-mobile: 4px !default;
+
+$pattern: () !default;
+$_pattern: map.merge(
+  (
+    primary: (
+      default: (
+        background: #aaa,
+        color: #000
+      ),
+      hover: (
+        background: #fff,
+        color: #aaa
+      )
+    ),
+    success: (
+      default: (
+        background: #aaa,
+        color: #000
+      ),
+      hover: (
+        background: #fff,
+        color: #bbb
+      )
+    )
+  ),
+  $pattern
+);
+
+// Mixins
+@mixin generator() {
+  @each $selector, $state in $_pattern {
+    &--#{$selector} {
+      @each $status, $block in $state {
+        @if($status == 'default') {
+          @each $property, $value in $block {
+            #{$property}: $value;
+          }
+        } @else {
+          &:#{$status} {
+            @each $property, $value in $block {
+              #{$property}: $value;
+            }
+          }
+        }
+      }
+    }
+  }
+}

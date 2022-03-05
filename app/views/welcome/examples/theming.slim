@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title
+      | Theming - Semantic
+    link rel="stylesheet" type="text/css" href="../dist/semantic.css"
+    script src="assets/library/jquery.min.js"
+    script src="assets/library/iframe.js"
+    css:
+      body>.ui.container {
+        margin-top: 3em;
+      }
+
+      iframe {
+        border: none;
+        width: calc(100% + 2em);
+        margin: 0em -1em;
+        height: 300px;
+      }
+
+      iframe html {
+        overflow: hidden;
+      }
+
+      iframe body {
+        padding: 0em;
+      }
+
+      .ui.container>h1 {
+        font-size: 3em;
+        text-align: center;
+        font-weight: normal;
+      }
+
+      .ui.container>h2.dividing.header {
+        font-size: 2em;
+        font-weight: normal;
+        margin: 4em 0em 3em;
+      }
+
+      .ui.table {
+        table-layout: fixed;
+      }
+  body
+    .ui.container
+      h1
+        | Theming Examples
+      h2.ui.dividing.header
+        | Site
+      iframe src="components/site.html" width="100%" scrolling="no"
+      h2.ui.dividing.header
+        | Menu
+      iframe src="components/menu.html" width="100%" scrolling="no"
+      h2.ui.dividing.header
+        | Buttons
+      iframe src="components/button.html" width="100%" scrolling="no"
+      h2.ui.dividing.header
+        | Table
+      iframe src="components/table.html" width="100%" scrolling="no"
+      h2.ui.dividing.header
+        | Input
+      iframe src="components/input.html" width="100%" scrolling="no"
+      h2.ui.dividing.header
+        | Card
+      iframe src="components/card.html" width="100%" scrolling="no"
+    javascript:
+      $('iframe').iFrameResize({
+        autoResize: true,
+        checkOrigin: false,
+        heightCalculationMethod: 'bodyScroll'
+      });

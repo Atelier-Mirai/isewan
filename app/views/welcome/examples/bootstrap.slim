@@ -1,0 +1,446 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title
+      | Bootstrap - Semantic
+    link rel="stylesheet" type="text/css" href="../dist/semantic.css"
+    script src="assets/library/jquery.min.js"
+    script src="../dist/semantic.js"
+    javascript:
+      $(document).ready(function () {
+        $('.ui.selection.dropdown').dropdown();
+        $('.ui.menu .ui.dropdown').dropdown({
+          on: 'hover'
+        });
+      });
+  body
+    .ui.grid.container
+      .row
+        .column
+          h1.ui.header
+            | Bootstrap Migration
+      .row
+        .column
+          .ui.message
+            h1.ui.header
+              | Hello, world!
+            p
+              | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+            a.ui.blue.button
+              | Learn more »
+      .row
+        .column
+          h1.ui.header
+            | Buttons
+          a.ui.button tabindex="0"
+            |  Default
+          a.ui.primary.button tabindex="0"
+            |  Primary
+          a.ui.basic.button tabindex="0"
+            |  Basic
+          a.ui.positive.button tabindex="0"
+            |  Success
+          a.ui.negative.button tabindex="0"
+            |  Error
+      .row
+        .column
+          h1.ui.header
+            | Thumbnails
+          .ui.divider
+          img.ui.small.image src="assets/images/wireframe/image.png"
+      .row
+        .column
+          h1.ui.header
+            | Dropdown
+          .ui.divider
+          .ui.selection.dropdown
+            input type="hidden" name="selection"
+            i.dropdown.icon
+            .default.text
+              | Select
+            .menu
+              .item data-value="male"
+                | Male
+              .item data-value="female"
+                | Female
+          .ui.vertical.menu
+            a.active.item
+              |  Friends
+            a.item
+              |  Messages
+            .ui.dropdown.item
+              i.dropdown.icon
+              |  More
+              .menu
+                a.item
+                  | Edit Profile
+                a.item
+                  | Choose Language
+                a.item
+                  | Account Settings
+          .ui.dropdown
+            .visible.menu
+              .header
+                | Categories
+              .item
+                i.dropdown.icon
+                span.text
+                  | Clothing
+                .menu
+                  .header
+                    | Men's
+                  .item
+                    | Shirts
+                  .item
+                    | Pants
+                  .item
+                    | Jeans
+                  .item
+                    | Shoes
+                  .divider
+                  .header
+                    | Women's
+                  .item
+                    | Dresses
+                  .item
+                    | Shoes
+                  .item
+                    | Bags
+              .item
+                | Home Goods
+              .item
+                | Bedroom
+              .divider
+              .header
+                | Order
+              .item
+                | Status
+              .item
+                | Cancellations
+      .row
+        .column
+          h1.ui.header
+            | Badges
+          .ui.divider
+          .ui.vertical.menu
+            .item
+              |  One
+              span.ui.label
+                | 2
+            .item
+              |  Two
+              span.ui.label
+                | 2
+            .item
+              |  Three
+              span.ui.label
+                | 2
+      .row
+        .column
+          h1.ui.header
+            | Tables
+          .ui.two.column.grid
+            .column
+              table.ui.table
+                thead
+                  tr
+                    th
+                      | Name
+                    th
+                      | Premium Plan
+                tbody
+                  tr
+                    td
+                      | John
+                    td
+                      | No
+                  tr
+                    td
+                      | Jamie
+                    td
+                      | Yes
+                  tr
+                    td
+                      | Jill
+                    td
+                      | Yes
+            .column
+              table.ui.basic.table
+                thead
+                  tr
+                    th
+                      | Name
+                    th
+                      | Premium Plan
+                tbody
+                  tr
+                    td
+                      | John
+                    td
+                      | No
+                  tr
+                    td
+                      | Jamie
+                    td
+                      | Yes
+                  tr
+                    td
+                      | Jill
+                    td
+                      | Yes
+            .column
+              table.ui.definition.table
+                thead
+                  tr
+                    th
+                      | Name
+                    th
+                      | Premium Plan
+                tbody
+                  tr
+                    td
+                      | John
+                    td
+                      | No
+                  tr
+                    td
+                      | Jamie
+                    td
+                      | Yes
+                  tr
+                    td
+                      | Jill
+                    td
+                      | Yes
+            .column
+              table.ui.very.basic.table
+                thead
+                  tr
+                    th
+                      | Name
+                    th
+                      | Premium Plan
+                tbody
+                  tr
+                    td
+                      | John
+                    td
+                      | No
+                  tr
+                    td
+                      | Jamie
+                    td
+                      | Yes
+                  tr
+                    td
+                      | Jill
+                    td
+                      | Yes
+            .sixteen.wide.column
+              table.ui.celled.structured.table
+                thead
+                  tr
+                    th rowspan="2"
+                      | Name
+                    th rowspan="2"
+                      | Type
+                    th rowspan="2"
+                      | Files
+                    th colspan="3"
+                      | Languages
+                  tr
+                    th
+                      | Ruby
+                    th
+                      | JavaScript
+                    th
+                      | Python
+                tbody
+                  tr
+                    td
+                      | Alpha Team
+                    td
+                      | Project 1
+                    td
+                      | 2
+                    td
+                      i.large.green.checkmark.icon
+                    td
+                    td
+                  tr
+                    td rowspan="3"
+                      | Beta Team
+                    td
+                      | Project 1
+                    td
+                      | 52
+                    td
+                      i.large.green.checkmark.icon
+                    td
+                    td
+                  tr
+                    td
+                      | Project 2
+                    td
+                      | 12
+                    td
+                    td
+                      i.large.green.checkmark.icon
+                    td
+                  tr
+                    td
+                      | Project 3
+                    td
+                      | 21
+                    td
+                      i.large.green.checkmark.icon
+                    td
+                    td
+      .row
+        .column
+          h1.ui.header
+            | Alerts
+          .ui.divider
+          .ui.positive.message
+            | Well done! You successfully read this important alert message.
+          .ui.info.message
+            | Heads up! This alert needs your attention, but it's not super important.
+          .ui.warning.message
+            | Warning! Best check yo self, you're not looking too good.
+          .ui.error.message
+            | Oh snap! Change a few things up and try submitting again.
+      .row
+        .column
+          h1.ui.header
+            | List groups
+          .ui.divider
+          .ui.three.column.grid
+            .column
+              .ui.segments
+                .ui.segment
+                  p
+                    | Cras justo odio
+                .ui.segment
+                  p
+                    | Dapibus ac facilisis in
+                .ui.segment
+                  p
+                    | Morbi leo risus
+                .ui.segment
+                  p
+                    | Porta ac consectetur ac
+                .ui.segment
+                  p
+                    | Vestibulum at eros
+            .column
+              .ui.fluid.vertical.menu
+                a.item
+
+                p
+                  | Cras justo odio
+                a.item
+
+                p
+                  | Vestibulum at eros
+            .column
+              .ui.fluid.vertical.menu
+                a.item
+                  h1.ui.medium.header
+                    | List group item heading
+                p
+                  | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                a.item
+                  h1.ui.medium.header
+                    | List group item heading
+                p
+                  | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                a.item
+                  h1.ui.medium.header
+                    | List group item heading
+                p
+                  | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+      .row
+        .column
+          h1.ui.header
+            | Panels
+          .ui.divider
+          .ui.three.column.grid
+            .column
+              .ui.segments
+                .ui.red.segment
+                  | One
+                .ui.blue.segment
+                  | Two
+                .ui.green.segment
+                  | Three
+            .column
+              .ui.raised.segments
+                .ui.segment
+                  | One
+                .ui.segment
+                  | Two
+                .ui.segment
+                  | Three
+            .column
+              .ui.stacked.segments
+                .ui.segment
+                  | One
+                .ui.segment
+                  | Two
+                .ui.segment
+                  | Three
+            .column
+              .ui.top.attached.error.message
+                | Error
+              .ui.bottom.attached.segment
+                | Panel content
+            .column
+              .ui.top.attached.info.message
+                | Info
+              .ui.bottom.attached.segment
+                | Panel content
+            .column
+              .ui.top.attached.success.message
+                | Success
+              .ui.bottom.attached.segment
+                | Panel content
+            .column
+              h4.ui.top.attached.inverted.header
+                | Header
+              .ui.bottom.attached.segment
+                | Panel content
+            .column
+              h4.ui.top.attached.block.header
+                | Header
+              .ui.bottom.attached.segment
+                | Panel content
+            .column
+              h4.ui.top.attached.header
+                | Header
+              .ui.bottom.attached.segment
+                | Panel content
+      .row
+        .column
+          h1.ui.header
+            | Wells
+          .ui.divider
+          .ui.segment
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+          .ui.secondary.segment
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+          .ui.tertiary.segment
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+          .ui.inverted.segment
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+          .ui.secondary.inverted.segment
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+          .ui.tertiary.inverted.segment
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.

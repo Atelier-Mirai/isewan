@@ -1,0 +1,56 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+
+$_ua-default-font-size: 16px;
+
+@function _strip-unit($number) {
+  @if (meta.type-of($number) == 'number' and not math.is-unitless($number)) {
+    @return $number;
+  }
+
+  @return $number / ($number * 0 + 1);
+}
+
+@function mapDeepGet($map, $keys...) {
+  $pmap: $map;
+  @each $key in $keys {
+    @if not map.has-key($pmap, $key) {
+      @return null;
+    }
+    $pmap: map.get($pmap, $key);
+  }
+
+  @return $pmap;
+}
+
+@function px2rem($number) {
+  $result: $number;
+
+  // 単位がpx以外なら値をそのまま返す
+  @if (not(math.unit($number) == 'px')) {
+    @return $result;
+  }
+
+  $result: _strip-unit($number / $_ua-default-font-size) *
+    1rem;
+
+  @return $result;
+}
+
+@function px2em(
+  $number,
+  $parent-number: $_ua-default-font-size
+) {
+  $result: $number;
+
+  // 単位がpx以外なら値をそのまま返す
+  @if (not(math.unit($number) == 'px')) {
+    @return $result;
+  }
+
+  $result: _strip-unit($number / $parent-number) * 1em;
+
+  @return $result;
+}
+

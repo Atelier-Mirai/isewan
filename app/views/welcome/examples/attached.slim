@@ -1,0 +1,371 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title
+      | Attached - Semantic
+    link rel="stylesheet" type="text/css" href="../dist/components/reset.css"
+    link rel="stylesheet" type="text/css" href="../dist/components/site.css"
+    link rel="stylesheet" type="text/css" href="../dist/components/container.css"
+    link rel="stylesheet" type="text/css" href="../dist/components/divider.css"
+    link rel="stylesheet" type="text/css" href="../dist/components/grid.css"
+    link rel="stylesheet" type="text/css" href="../dist/components/header.css"
+    link rel="stylesheet" type="text/css" href="../dist/components/segment.css"
+    link rel="stylesheet" type="text/css" href="../dist/components/table.css"
+    link rel="stylesheet" type="text/css" href="../dist/components/icon.css"
+    link rel="stylesheet" type="text/css" href="../dist/components/menu.css"
+    link rel="stylesheet" type="text/css" href="../dist/components/message.css"
+    css:
+      h2 { margin: 2em 0em; } .ui.container { padding-top: 5em; padding-bottom: 5em; }
+  body
+    .ui.container
+      h2.ui.header
+        | Attached Content
+      .ui.three.column.grid
+        .column
+          .top.attached.ui.segment
+            |  Segment 1
+          .attached.ui.segment
+            |  Segment 2
+          .attached.ui.segment
+            |  Segment 2
+          .bottom.attached.ui.segment
+            |  Segment 3
+          .ui.segments
+            .ui.segment
+              p
+                | Top
+            .ui.segments
+              .ui.segment
+                p
+                  | Nested Top
+              .ui.segment
+                p
+                  | Nested Middle
+              .ui.segment
+                p
+                  | Nested Bottom
+            .ui.segment
+              p
+                | Middle
+            .ui.horizontal.segments
+              .ui.segment
+                p
+                  | Top
+              .ui.segment
+                p
+                  | Middle
+              .ui.segment
+                p
+                  | Bottom
+            .ui.segment
+              p
+                | Bottom
+        .column
+          table.top.attached.ui.basic.table
+            thead
+              th
+                | Header
+              th
+                | Header
+              th
+                | Header
+            tbody
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+          table.attached.ui.table
+            tbody
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+          table.attached.ui.celled.selectable.table
+            tbody
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+          table.bottom.attached.ui.celled.table
+            thead
+              th
+                | Header
+              th
+                | Header
+              th
+                | Header
+            tbody
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+              tr
+                td
+                  | Cell
+                td
+                  | Cell
+                td
+                  | Cell
+        .column
+          .top.attached.ui.three.item.menu
+            a.item
+              | Item
+            a.item
+              | Item
+            a.item
+              | Item
+          .attached.ui.three.item.menu
+            a.item
+              | Item
+            a.item
+              | Item
+            a.item
+              | Item
+          .attached.ui.three.item.menu
+            a.item
+              | Item
+            a.item
+              | Item
+            a.item
+              | Item
+          .bottom.attached.ui.three.item.menu
+            a.item
+              | Item
+            a.item
+              | Item
+            a.item
+              | Item
+          .ui.top.attached.tabular.menu
+            a.active.item
+              | Active Item
+            a.item
+              | Item
+            a.item
+              | Item
+          .ui.bottom.attached.segment
+            |  Segment
+          .ui.top.attached.menu
+            a.active.item
+              | Active Item
+            a.item
+              | Item
+            a.item
+              | Item
+          .ui.bottom.attached.segment
+            |  Segment
+    .ui.text.container
+      h2.ui.header
+        | Header Groups
+      h4.ui.top.attached.block.header
+        |  Top Block Header
+      .ui.bottom.attached.segment
+        |  Segment
+      .ui.section.divider
+      .ui.top.attached.segment
+        |  Segment
+      h4.ui.bottom.attached.block.header
+        |  Bottom Block Header
+      .ui.section.divider
+      h4.ui.top.attached.block.header
+        |  Top Block Header
+      .ui.attached.segment
+        |  Segment
+      h4.ui.attached.block.header
+        |  Middle Block Header
+      .ui.attached.segment
+        |  Segment
+      h4.ui.bottom.attached.block.header
+        |  Bottom Block Header
+      h2.ui.header
+        | Mixed Attached Content
+      .ui.section.divider
+      .ui.top.attached.segment
+        | Segment
+      .ui.attached.three.item.menu
+        a.item
+          | Item
+        a.item
+          | Item
+        a.item
+          | Item
+      .ui.attached.segment
+        |  1
+      .ui.attached.icon.info.message
+        i.help.circle.icon
+        .content
+          |  Message
+      table.ui.bottom.attached.table
+        thead
+          th
+            | Header
+          th
+            | Header
+          th
+            | Header
+        tbody
+          tr
+            td
+              | Cell
+            td
+              | Cell
+            td
+              | Cell
+          tr
+            td
+              | Cell
+            td
+              | Cell
+            td
+              | Cell
+          tr
+            td
+              | Cell
+            td
+              | Cell
+            td
+              | Cell
+      .ui.section.divider
+      .ui.top.attached.warning.icon.message
+        i.attention.icon
+        .content
+          |  Message
+      table.ui.attached.table
+        thead
+          th
+            | Header
+          th
+            | Header
+          th
+            | Header
+        tbody
+          tr
+            td
+              | Cell
+            td
+              | Cell
+            td
+              | Cell
+          tr
+            td
+              | Cell
+            td
+              | Cell
+            td
+              | Cell
+          tr
+            td
+              | Cell
+            td
+              | Cell
+            td
+              | Cell
+      .ui.bottom.attached.three.item.menu
+        a.item
+          | Item
+        a.item
+          | Item
+        a.item
+          | Item
+      .ui.section.divider
+      .ui.top.attached.three.item.inverted.menu
+        a.item
+          | Item
+        a.item
+          | Item
+        a.item
+          | Item
+      table.ui.attached.inverted.table
+        thead
+          th
+            | Header
+          th
+            | Header
+          th
+            | Header
+        tbody
+          tr
+            td
+              | Cell
+            td
+              | Cell
+            td
+              | Cell
+          tr
+            td
+              | Cell
+            td
+              | Cell
+            td
+              | Cell
+          tr
+            td
+              | Cell
+            td
+              | Cell
+            td
+              | Cell
+      .ui.bottom.attached.inverted.segment
+        |  Segment

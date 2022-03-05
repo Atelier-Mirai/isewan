@@ -1,0 +1,175 @@
+doctype html
+html
+  head
+    meta[charset="utf-8"]
+    meta[http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"]
+    meta[name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"]
+    title
+      | Theming - Semantic
+    link[rel="stylesheet" type="text/css" href="../../dist/components/reset.css"]
+    link[rel="stylesheet" type="text/css" href="../../dist/components/site.css"]
+    link[rel="stylesheet" type="text/css" href="../../dist/components/grid.css"]
+    link[rel="stylesheet" type="text/css" href="../../dist/components/menu.css"]
+    link[rel="stylesheet" type="text/css" href="../../dist/components/input.css"]
+    link[rel="stylesheet" type="text/css" href="../../dist/components/dropdown.css"]
+    link[rel="stylesheet" type="text/css" href="../../dist/components/icon.css"]
+    link[rel="stylesheet" type="text/css" href="../../dist/components/button.css"]
+    link[rel="stylesheet" type="text/css" href="../../dist/components/transition.css"]
+    link[rel="stylesheet" type="text/css" href="../../dist/components/popup.css"]
+    script[src="../assets/library/jquery.min.js"]
+    script[src="../assets/library/iframe-content.js"]
+    script[src="../assets/show-examples.js"]
+    script[type="text/javascript" src="../../dist/components/popup.js"]
+    script[type="text/javascript" src="../../dist/components/transition.js"]
+    script[type="text/javascript" src="../../dist/components/dropdown.js"]
+    style
+      |  body { padding: 1em; } .ui.menu { margin: 3em 0em; } .ui.menu:last-child { margin-bottom: 110px; } 
+    script
+      |  $(document) .ready(function() { $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' }); $('.ui.menu a.item') .on('click', function() { $(this) .addClass('active') .siblings() .removeClass('active') ; }) ; }) ; 
+  body
+    .ui.menu
+      .header.item
+        | Brand
+      a.active.item
+        | Link
+      a.item
+        | Link
+      .ui.dropdown.item
+        |  Dropdown 
+        i.dropdown.icon
+        .menu
+          .item
+            | Action
+          .item
+            | Another Action
+          .item
+            | Something else here
+          .divider
+          .item
+            | Separated Link
+          .divider
+          .item
+            | One more separated link
+      .right.menu
+        .item
+          .ui.action.left.icon.input
+            i.search.icon
+            input[type="text" placeholder="Search"]
+            button.ui.button
+              | Submit
+        a.item
+          | Link
+    .ui.inverted.menu
+      .header.item
+        | Brand
+      .active.item
+        | Link
+      a.item
+        | Link
+      .ui.dropdown.item
+        |  Dropdown 
+        i.dropdown.icon
+        .menu
+          .item
+            | Action
+          .item
+            | Another Action
+          .item
+            | Something else here
+          .divider
+          .item
+            | Separated Link
+          .divider
+          .item
+            | One more separated link
+      .right.menu
+        .item
+          .ui.transparent.inverted.icon.input
+            i.search.icon
+            input[type="text" placeholder="Search"]
+        a.item
+          | Link
+    .ui.secondary.menu
+      .active.item
+        | Link
+      a.item
+        | Link
+      .ui.dropdown.item
+        |  Dropdown 
+        i.dropdown.icon
+        .menu
+          .item
+            | Action
+          .item
+            | Another Action
+          .item
+            | Something else here
+          .divider
+          .item
+            | Separated Link
+          .divider
+          .item
+            | One more separated link
+      .right.menu
+        .item
+          .ui.action.left.icon.input
+            i.search.icon
+            input[type="text" placeholder="Search"]
+            button.ui.button
+              | Submit
+        .ui.dropdown.item
+          |  Dropdown Left
+          i.dropdown.icon
+          .menu
+            a.item
+              | Link
+            a.item
+              | Link
+            .divider
+            .header
+              | Header
+            .item
+              i.dropdown.icon
+              |  Sub Menu 
+              .menu
+                a.item
+                  | Link
+                .item
+                  i.dropdown.icon
+                  |  Sub Sub Menu 
+                  .menu
+                    a.item
+                      | Link
+                    a.item
+                      | Link
+                a.item
+                  | Link
+            a.item
+              | Link
+        a.item
+          | Link
+    .ui.three.column.doubling.grid
+      .column
+        .ui.secondary.pointing.menu
+          .active.item
+            | Link
+          a.item
+            | Link
+          a.item
+            | Link
+      .column
+        .ui.tabular.menu
+          .active.item
+            | Link
+          a.item
+            | Link
+          a.item
+            | Link
+      .column
+        .ui.pointing.menu
+          .active.item
+            | Link
+          a.item
+            | Link
+          .right.item
+            |  Right Text 

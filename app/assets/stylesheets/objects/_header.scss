@@ -1,0 +1,6 @@
+@use "utilities/iro" as *;
+
+h1 {
+  color: lighten($konjiki, 0%);
+  margin: calc(60px / 2);
+}
