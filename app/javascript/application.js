@@ -2,4 +2,13 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
+// import jquery from "jquery"
+import $ from "jquery"
+// window.$ = jquery
+
+
 //= require semantic-ui
+
+$(()=>{
+  console.log('hello');
+})

@@ -1,7 +1,12 @@
-footer.ui.blue.segment.footer
+footer.ui.blue.segment.footer.bg-sakurairo
 
   p.ui.center.aligned.header
     = "Copyright © 1983-#{Time.current.year} <br class='mobile only'>伊勢湾カップ実行委員会<br class='mobile only'> All rights reserved.".html_safe
   p.ui.right.aligned.small.header style="font-weight: normal;"
     | 連絡先
     = link_to "ayf-wind@sd5.so-net.ne.jp", "mailto:ayf-wind@sd5.so-net.ne.jp"
+
+  / 先頭へ戻る
+  = link_to "#", id: "page_top" do
+    span
+      i.fa-solid.fa-angles-up.fa-lg

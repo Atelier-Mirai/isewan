@@ -18,5 +18,9 @@ module Isewan
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+
+    config.time_zone = "Tokyo" # Rails アプリを日本時間で設定
+    config.active_record.default_timezone = :local # DBの時刻をJSTで読み込む
   end
 end

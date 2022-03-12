@@ -38,6 +38,7 @@ group :development, :test do
 
   # データベースを整形して見易く表示
   gem "hirb"
+  gem "hirb-unicode"
 end
 
 group :development do

@@ -1,6 +1,236 @@
-@use "utilities/iro" as *;
+@use "utilities" as *;
 
-h1 {
-  color: lighten($konjiki, 0%);
-  margin: calc(60px / 2);
+/*-----------------------------------------------------------------------------
+// デスクトップ用
+-----------------------------------------------------------------------------*/
+.computer.header {
+
+  // サイト ロゴ
+  @media (max-width: 992px) {
+    h1 {
+      font-size: 2rem;
+      color: $konjiki !important;
+      text-shadow: 1px 1px 1px $kurohairo;
+
+      padding: 0.5rem !important;
+      &:hover {
+        color: lighten($konjiki, 15%) !important;
+      }
+      img {
+        margin-right: 0.5rem;
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+  h1 {
+    font-size: 2.5rem;
+    color: $konjiki !important;
+    text-shadow: 1px 1px 1px $kurohairo;
+
+    padding: 0.5rem !important;
+    &:hover {
+      color: lighten($konjiki, 15%) !important;
+    }
+    img {
+      margin-right: 0.5rem;
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  // メニューアイテムの調整
+  .item {
+    padding: 0.875rem 0.5rem;
+
+    &::before {
+      width: 0;
+    }
+    border-right: 0;
+  }
+
+  .ui.menu .item:before {
+    width: 0 !important;
+    background: $sakurairo !important;
+  }
+  .ui.menu .item:before {
+   position:absolute;
+   content:"";
+   top:0;
+   right:0;
+   height:100%;
+   width:0px;
+   background: rgba(34,36,38,.0)
+  }
+}
+
+/*-----------------------------------------------------------------------------
+// モバイル用
+-----------------------------------------------------------------------------*/
+.mobile.header {
+  background: $sakurairo;
+  z-index: 10;
+  // position: sticky;
+  position: fixed;
+  top: 0;
+  display: grid;
+  grid-template-columns: minmax(4%, 1fr) minmax(auto, 1166px) minmax(4%, 1fr);
+  grid-template-rows: 60px;
+  // transform: translateY(-60px);
+
+  > * {
+    grid-column: 2;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+  }
+
+  // サイト名
+  .site-title {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    align-self: center;
+
+    img {
+      width: auto;
+      height: 40px;
+      vertical-align: bottom;
+      margin-right: 7px;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: $konjiki !important;
+    }
+  }
+
+  // ハンバーガーボタン
+  .navbtn {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  // ハンバーガーメニューの色
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: $kurohairo;
+  }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: $sakurairo;
+  }
+
+  // メニュー
+  .nav {
+    width: 100vw;
+    height: 100vh;
+
+    ul {
+      .site-title {
+        margin-bottom: 25px;
+        color: $konjiki;
+        text-shadow: 1px 1px 1px $kurohairo;
+      }
+
+      a {
+        color: $konjiki;
+        font-size: 24px;
+      }
+
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 50px;
+      margin-top: calc(calc(100vh - 400px) / 2);
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      color: $sakurairo;
+    }
+
+    position: fixed;
+    inset: 0 -100% 0 100%; // 初期配置では画面外
+    z-index: 100;
+    background: rgba(13, 13, 13, 0.85);
+    transition: transform 0.3s;
+  }
+}
+
+.open {
+  .navbtn {
+    z-index: 110;
+    color: white;
+  }
+
+  .nav {
+    transform: translate(-100%, 0);
+  }
+
+  body {
+    position: fixed;
+    overflow: hidden;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+// スクロール時にメニュー出現
+-----------------------------------------------------------------------------*/
+// メニューバーの位置を上部に固定
+.computer.scroll_header_menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0; // 始めは非表示
+  transform: translateY(-60px);
+
+  // メニューバーの出現する動き
+  &.appear {
+    animation: appear_animation 0.5s forwards;
+    position: fixed;
+    // display: grid;
+  }
+  @keyframes appear_animation {
+    from {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // メニューバーの消える際の動き
+  &.disappear {
+    animation: disappear_animation 0.5s forwards;
+    // display: none;
+  }
+  @keyframes disappear_animation {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+  }
 }

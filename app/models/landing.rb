@@ -1,0 +1,2 @@
+class Landing < Article
+end

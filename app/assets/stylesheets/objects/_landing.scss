@@ -1,11 +1,47 @@
+@use "utilities" as *;
+
 #landing {
   width: 100vw;
-  height: 100vh;
+  margin-top: 60px;
+  height: calc(100vh - 60px + 5px);
   background-image: url("yacht_blur.webp");
   background-size: cover;
   background-position: 10% 50%;
 
+  .h1 {
+    color: $utsushiiro;
+    font-size: clamp(32px, 10vw, 48px);
+    text-shadow: 2px 2px 2px $amairo;
+
+    padding-top: 7vh;
+  }
+
+  .h2, .h3 {
+    color: $sakurairo;
+    text-shadow: 2px 2px 2px $kurohairo;
+  }
+
+  .h2 {
+    font-size: clamp(24px, 7.5vw, 36px);
+    line-height: 1.4;
+    letter-spacing: 3px;
+  }
+
+  .h3 {
+    font-size: clamp(16px, 5vw, 24px);
+    letter-spacing: 3px;
+  }
+
   p {
     text-indent: 1em;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+    height: 100vh;
+
+    .ui.text.container {
+      margin-top: 5vh;
+    }
   }
 }

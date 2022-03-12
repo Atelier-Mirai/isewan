@@ -7,26 +7,44 @@ html
     = csrf_meta_tags
     = csp_meta_tag
 
+    / ファビコン
+    / = favicon_link_tag asset_path("favicon.ico")
+
     / Modaal
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.css"
+
+    / fontawesome
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+
+    / ハンバーガーメニュー
+    = stylesheet_link_tag "hamburgers", "data-turbo-track": "reload"
+
+    / スクロール時にヘッダー出現
+    / = javascript_include_tag "scroll_header_menu", "data-turbo-track": "reload"
 
     / 伊勢湾カップのためのスタイルシート
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
 
     = javascript_importmap_tags
 
+    / script
+    /   $(() => {
+    /     console.log("Hello Rails 7! aa");
+    /   })
+
     / jQuery
     script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     / Modaal
     script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"
+    / 先頭に戻る
+    = javascript_include_tag "page_top", "data-turbo-track": "reload"
 
     / Smooth Scroll ページ内リンクをクリックすると滑らかにスクロールする
     script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"
 
   body
-    .ui.container
-      = render "layouts/main_menu"
-      = semantic_flash
+    = render "layouts/header"
+    = semantic_flash
 
     = yield
 

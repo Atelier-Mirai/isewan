@@ -1,31 +1,13 @@
-h2.ui.header#gallery
+h2.ui.header#gallery.mt-5
   | 写真
 
 .ui.blue.segment.gallery
-  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
-    = image_tag "tora_s.webp"
-  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
-    = image_tag "tora_s.webp"
-  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
-    = image_tag "tora_s.webp"
-  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
-    = image_tag "tora_s.webp"
-  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
-    = image_tag "tora_s.webp"
-  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
-    = image_tag "tora_s.webp"
-  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
-    = image_tag "tora_s.webp"
-  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
-    = image_tag "tora_s.webp"
-  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
-    = image_tag "tora_s.webp"
-  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
-    = image_tag "tora_s.webp"
-  = link_to asset_path("tora.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
-    = image_tag "tora_s.webp"
+  -(1..29).each do |number|
+    - n = sprintf("%02d", number)
+    = link_to asset_path("#{n}.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
+      = image_tag "#{n}_s.webp"
 
-h2.ui.header
+h2.ui.header.mt-5
   | 動画
 
 css:
@@ -38,8 +20,9 @@ css:
 
 
 .ui.blue.segment.gallery
-  = link_to "https://player.vimeo.com/video/142216434", data: { group: "movie", modaal_desc: "Test movie"}, class: "movie"
-    = image_tag "tsuru_s.webp"
+  - %w(2015 2016 2017day1 2017day2 2018 2019).each do |movie|
+    = link_to "https://player.vimeo.com/video/142216434", data: { group: "movie", modaal_desc: "Test movie"}, class: "movie"
+      = image_tag "#{movie}_s.webp"
 
 javascript:
   $('.photo').modaal({
