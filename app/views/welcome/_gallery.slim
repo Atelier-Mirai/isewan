@@ -1,5 +1,12 @@
-h2.ui.header#gallery.mt-5
-  | 写真
+.ui.aligned.grid.mt-5
+  .left.floated.left.aligned.six.wide.column
+    .ui
+      h2.ui.h2.header#gallery
+        | 写真
+  .right.floated.right.aligned.six.wide.column
+    .ui
+      - if logged_in?
+        / = link_to "編輯", abouts_path, class: "ui primary button"
 
 .ui.blue.segment.gallery
   -(1..29).each do |number|

@@ -1,9 +1,12 @@
-h2.ui.header#about.mt-5
-  | 伊勢湾カップとは
-  - if logged_in?
-    = link_to "一覧", abouts_path, class: "ui primary button ml-5"
+.ui.aligned.grid.mt-5
+  .left.floated.left.aligned.six.wide.column
+    .ui
+      h2.ui.h2.header#about
+        | 伊勢湾カップとは
+  .right.floated.right.aligned.six.wide.column
+    .ui
+      - if logged_in?
+        = link_to "編輯", abouts_path, class: "ui primary button"
 
-.ui.blue.segment
-  p
-    = @about.body
-    / | 1983年(昭和58年)より開催。今年で39回目を迎えた国内有数のウィンドサーフィンの祭典です。
+.ui.blue.segment.mb-5
+  = markdown(@about.body)

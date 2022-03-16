@@ -1,0 +1,275 @@
+h2 飾り付け方法
+p
+  | 直接、文字を入力するとそのまま表示されます。
+  br
+  | 見出しやリンクなど、いろいろ飾り付けることもできます。
+
+ul style="list-style-type: cjk-ideographic;"
+  li
+    | 本文
+    p
+      | (何もマークをつけず、直接文章を書く)
+  li
+    | 見出し
+    p
+      | # 大見出し
+      br
+      | ## 中見出し
+      br
+      | ### 小見出し
+  li
+    | 斜体
+    p
+      | 「*」で斜体にしたい文字をくくる
+      br
+      | *伊勢湾カップ*2017 (「伊勢湾カップ」が斜体になる)
+  li
+    | 太字
+    p
+      | 「**」で太字にしたい文字をくくる
+      br
+      | **伊勢湾カップ**2017 (「伊勢湾カップ」が太字になります)
+  li
+    | 下線
+    p
+      | 「 _ 」で下線を引きたい文字をくくる
+      br
+      | _伊勢湾カップ_2017 (「伊勢湾カップ」に下線が引かれます)
+  li
+    | リンク
+    p
+      | []の中に文字を、()の中にURLを書く
+      br
+      | [伊勢湾カップ](https://isewan.herokuapp.com)
+  li
+    | 箇条書き
+    p
+      | * 項目イ
+      br
+      | * 項目ロ
+      br
+      | * 項目ハ
+  li
+    | 番号付き箇条書き
+    p
+      | 1. 項目イ
+      br
+      | 1. 項目ロ (2. 項目ロ でもよい)
+      br
+      | 1. 項目ハ (3. 項目ハ でもよい)
+  li
+    | 水平線
+    p
+      | --- (３つ以上で水平線になる)
+  li
+    | 色
+    p
+      | &lt;red 赤くなります&gt;&nbsp;→&nbsp;
+      span style='color:red;'
+        | 赤くなります
+      br
+      <table>
+        <caption>色 一覧</caption>
+        <tbody>
+          <tr>
+            <td style="background-color:#000000"><span style="color:#fff">black</span></td>
+            <td style="background-color:#f0f8ff"><span style="color:#333">aliceblue</span></td>
+            <td style="background-color:#008b8b"><span style="color:#333">darkcyan</span></td>
+            <td style="background-color:#ffffe0"><span style="color:#333">lightyellow</span></td>
+            <td style="background-color:#ff7f50"><span style="color:#333">coral</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#696969"><span style="color:#fff">dimgray</span></td>
+            <td style="background-color:#e6e6fa"><span style="color:#333">lavender</span></td>
+            <td style="background-color:#008080"><span style="color:#fff">teal</span></td>
+            <td style="background-color:#fafad2"><span style="color:#333">lightgoldenrodyellow</span></td>
+            <td style="background-color:#ff6347"><span style="color:#333">tomato</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#808080"><span style="color:#333">gray</span></td>
+            <td style="background-color:#b0c4de"><span style="color:#333">lightsteelblue</span></td>
+            <td style="background-color:#2f4f4f"><span style="color:#fff">darkslategray</span></td>
+            <td style="background-color:#fffacd"><span style="color:#333">lemonchiffon</span></td>
+            <td style="background-color:#ff4500"><span style="color:#333">orangered</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#a9a9a9"><span style="color:#333">darkgray</span></td>
+            <td style="background-color:#778899"><span style="color:#333">lightslategray</span></td>
+            <td style="background-color:#006400"><span style="color:#fff">darkgreen</span></td>
+            <td style="background-color:#f5deb3"><span style="color:#333">wheat</span></td>
+            <td style="background-color:#ff0000"><span style="color:#333">red</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#c0c0c0"><span style="color:#333">silver</span></td>
+            <td style="background-color:#708090"><span style="color:#333">slategray</span></td>
+            <td style="background-color:#008000"><span style="color:#fff">green</span></td>
+            <td style="background-color:#deb887"><span style="color:#333">burlywood</span></td>
+            <td style="background-color:#dc143c"><span style="color:#333">crimson</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#d3d3d3"><span style="color:#333">lightgrey</span></td>
+            <td style="background-color:#4682b4"><span style="color:#333">steelblue</span></td>
+            <td style="background-color:#228b22"><span style="color:#fff">forestgreen</span></td>
+            <td style="background-color:#d2b48c"><span style="color:#333">tan</span></td>
+            <td style="background-color:#c71585"><span style="color:#333">mediumvioletred</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#dcdcdc"><span style="color:#333">gainsboro</span></td>
+            <td style="background-color:#4169e1"><span style="color:#fff">royalblue</span></td>
+            <td style="background-color:#2e8b57"><span style="color:#fff">seagreen</span></td>
+            <td style="background-color:#f0e68c"><span style="color:#333">khaki</span></td>
+            <td style="background-color:#ff1493"><span style="color:#333">deeppink</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#f5f5f5"><span style="color:#333">whitesmoke</span></td>
+            <td style="background-color:#191970"><span style="color:#fff">midnightblue</span></td>
+            <td style="background-color:#3cb371"><span style="color:#333">mediumseagreen</span></td>
+            <td style="background-color:#ffff00"><span style="color:#333">yellow</span></td>
+            <td style="background-color:#ff69b4"><span style="color:#333">hotpink</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#ffffff"><span style="color:#333">white</span></td>
+            <td style="background-color:#000080"><span style="color:#fff">navy</span></td>
+            <td style="background-color:#66cdaa"><span style="color:#333">mediumaquamarine</span></td>
+            <td style="background-color:#ffd700"><span style="color:#333">gold</span></td>
+            <td style="background-color:#db7093"><span style="color:#333">palevioletred</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#fffafa"><span style="color:#333">snow</span></td>
+            <td style="background-color:#00008b"><span style="color:#fff">darkblue</span></td>
+            <td style="background-color:#8fbc8f"><span style="color:#333">darkseagreen</span></td>
+            <td style="background-color:#ffa500"><span style="color:#333">orange</span></td>
+            <td style="background-color:#ffc0cb"><span style="color:#333">pink</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#f8f8ff"><span style="color:#333">ghostwhite</span></td>
+            <td style="background-color:#0000cd"><span style="color:#fff">mediumblue</span></td>
+            <td style="background-color:#7fffd4"><span style="color:#333">aquamarine</span></td>
+            <td style="background-color:#f4a460"><span style="color:#333">sandybrown</span></td>
+            <td style="background-color:#ffb6c1"><span style="color:#333">lightpink</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#fffaf0"><span style="color:#333">floralwhite</span></td>
+            <td style="background-color:#0000ff"><span style="color:#fff">blue</span></td>
+            <td style="background-color:#98fb98"><span style="color:#333">palegreen</span></td>
+            <td style="background-color:#ff8c00"><span style="color:#333">darkorange</span></td>
+            <td style="background-color:#d8bfd8"><span style="color:#333">thistle</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#faf0e6"><span style="color:#333">linen</span></td>
+            <td style="background-color:#1e90ff"><span style="color:#333">dodgerblue</span></td>
+            <td style="background-color:#90ee90"><span style="color:#333">lightgreen</span></td>
+            <td style="background-color:#daa520"><span style="color:#333">goldenrod</span></td>
+            <td style="background-color:#ff00ff"><span style="color:#333">magenta</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#faebd7"><span style="color:#333">antiquewhite</span></td>
+            <td style="background-color:#6495ed"><span style="color:#333">cornflowerblue</span></td>
+            <td style="background-color:#00ff7f"><span style="color:#333">springgreen</span></td>
+            <td style="background-color:#cd853f"><span style="color:#333">peru</span></td>
+            <td style="background-color:#ff00ff"><span style="color:#333">fuchsia</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#ffefd5"><span style="color:#333">papayawhip</span></td>
+            <td style="background-color:#00bfff"><span style="color:#333">deepskyblue</span></td>
+            <td style="background-color:#00fa9a"><span style="color:#333">mediumspringgreen</span></td>
+            <td style="background-color:#b8860b"><span style="color:#333">darkgoldenrod</span></td>
+            <td style="background-color:#ee82ee"><span style="color:#333">violet</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#ffebcd"><span style="color:#333">blanchedalmond</span></td>
+            <td style="background-color:#87cefa"><span style="color:#333">lightskyblue</span></td>
+            <td style="background-color:#7cfc00"><span style="color:#333">lawngreen</span></td>
+            <td style="background-color:#d2691e"><span style="color:#333">chocolate</span></td>
+            <td style="background-color:#dda0dd"><span style="color:#333">plum</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#ffe4c4"><span style="color:#333">bisque</span></td>
+            <td style="background-color:#87ceeb"><span style="color:#333">skyblue</span></td>
+            <td style="background-color:#7fff00"><span style="color:#333">chartreuse</span></td>
+            <td style="background-color:#a0522d"><span style="color:#fff">sienna</span></td>
+            <td style="background-color:#da70d6"><span style="color:#333">orchid</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#ffe4b5"><span style="color:#333">moccasin</span></td>
+            <td style="background-color:#add8e6"><span style="color:#333">lightblue</span></td>
+            <td style="background-color:#adff2f"><span style="color:#333">greenyellow</span></td>
+            <td style="background-color:#8b4513"><span style="color:#fff">saddlebrown</span></td>
+            <td style="background-color:#ba55d3"><span style="color:#333">mediumorchid</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#ffdead"><span style="color:#333">navajowhite</span></td>
+            <td style="background-color:#b0e0e6"><span style="color:#333">powderblue</span></td>
+            <td style="background-color:#00ff00"><span style="color:#333">lime</span></td>
+            <td style="background-color:#800000"><span style="color:#fff">maroon</span></td>
+            <td style="background-color:#9932cc"><span style="color:#fff">darkorchid</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#ffdab9"><span style="color:#333">peachpuff</span></td>
+            <td style="background-color:#afeeee"><span style="color:#333">paleturquoise</span></td>
+            <td style="background-color:#32cd32"><span style="color:#333">limegreen</span></td>
+            <td style="background-color:#8b0000"><span style="color:#fff">darkred</span></td>
+            <td style="background-color:#9400d3"><span style="color:#fff">darkviolet</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#ffe4e1"><span style="color:#333">mistyrose</span></td>
+            <td style="background-color:#e0ffff"><span style="color:#333">lightcyan</span></td>
+            <td style="background-color:#9acd32"><span style="color:#333">yellowgreen</span></td>
+            <td style="background-color:#a52a2a"><span style="color:#fff">brown</span></td>
+            <td style="background-color:#8b008b"><span style="color:#fff">darkmagenta</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#fff0f5"><span style="color:#333">lavenderblush</span></td>
+            <td style="background-color:#00ffff"><span style="color:#333">cyan</span></td>
+            <td style="background-color:#556b2f"><span style="color:#fff">darkolivegreen</span></td>
+            <td style="background-color:#b22222"><span style="color:#fff">firebrick</span></td>
+            <td style="background-color:#800080"><span style="color:#fff">purple</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#fff5ee"><span style="color:#333">seashell</span></td>
+            <td style="background-color:#00ffff"><span style="color:#333">aqua</span></td>
+            <td style="background-color:#6b8e23"><span style="color:#333">olivedrab</span></td>
+            <td style="background-color:#cd5c5c"><span style="color:#333">indianred</span></td>
+            <td style="background-color:#4b0082"><span style="color:#fff">indigo</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#fdf5e6"><span style="color:#333">oldlace</span></td>
+            <td style="background-color:#40e0d0"><span style="color:#333">turquoise</span></td>
+            <td style="background-color:#808000"><span style="color:#333">olive</span></td>
+            <td style="background-color:#bc8f8f"><span style="color:#333">rosybrown</span></td>
+            <td style="background-color:#483d8b"><span style="color:#fff">darkslateblue</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#fffff0"><span style="color:#333">ivory</span></td>
+            <td style="background-color:#48d1cc"><span style="color:#333">mediumturquoise</span></td>
+            <td style="background-color:#bdb76b"><span style="color:#333">darkkhaki</span></td>
+            <td style="background-color:#e9967a"><span style="color:#333">darksalmon</span></td>
+            <td style="background-color:#8a2be2"><span style="color:#fff">blueviolet</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#f0fff0"><span style="color:#333">honeydew</span></td>
+            <td style="background-color:#00ced1"><span style="color:#333">darkturquoise</span></td>
+            <td style="background-color:#eee8aa"><span style="color:#333">palegoldenrod</span></td>
+            <td style="background-color:#f08080"><span style="color:#333">lightcoral</span></td>
+            <td style="background-color:#9370db"><span style="color:#333">mediumpurple</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#f5fffa"><span style="color:#333">mintcream</span></td>
+            <td style="background-color:#20b2aa"><span style="color:#333">lightseagreen</span></td>
+            <td style="background-color:#fff8dc"><span style="color:#333">cornsilk</span></td>
+            <td style="background-color:#fa8072"><span style="color:#333">salmon</span></td>
+            <td style="background-color:#6a5acd"><span style="color:#fff">slateblue</span></td>
+          </tr>
+          <tr>
+            <td style="background-color:#f0ffff"><span style="color:#333">azure</span></td>
+            <td style="background-color:#5f9ea0"><span style="color:#333">cadetblue</span></td>
+            <td style="background-color:#f5f5dc"><span style="color:#333">beige</span></td>
+            <td style="background-color:#ffa07a"><span style="color:#333">lightsalmon</span></td>
+            <td style="background-color:#7b68ee"><span style="color:#333">mediumslateblue</span></td>
+          </tr>
+        </tbody>
+      </table>
+    p.small.text-right.pr-3
+      cite
+        = link_to 'WEB色見本 原色大辞典', 'https://www.colordic.org'
+      | より 引用改変

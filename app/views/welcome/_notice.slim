@@ -1,7 +1,12 @@
-h2.ui.h2.header#notice.mt-5
-  | 新着情報
-  - if logged_in?
-    = link_to "一覧", notices_path, class: "ui primary button ml-5"
+.ui.aligned.grid
+  .left.floated.left.aligned.six.wide.column
+    .ui
+      h2.ui.h2.header#notice
+        | 新着情報
+  .right.floated.right.aligned.six.wide.column
+    .ui
+      - if logged_in?
+        = link_to "編輯", notices_path, class: "ui primary button"
 
 css:
   th {
@@ -13,31 +18,29 @@ css:
 
 table.ui.blue.table
   tbody
-    tr.top.aligned
-      th.four.wide.large.text
-        | 第39回伊勢湾カップ2022
-        br
-        | 開催のお知らせ
-        small.pl-2
-          time
-            | (02/24)
-      td.twelve.wide
-        p
-          | 本年の伊勢湾カップは、8月6日、7日の両日に開催いたします。
-            新舞子の海で皆様にお会いできることを思い、実行委員会として
-            海のレースとして最高のパフォーマンスを発揮できるよう、準備をいたしております。
-        p
-          |
-            なお、シード選手ならびに各地区の予選大会については近日中に発表いたしますので、もうしばらくお待ちください。
+    / tr.top.aligned
+    /   th.four.wide.large.text
+    /     | 第39回伊勢湾カップ2022
+    /     br
+    /     | 開催のお知らせ
+    /     small.pl-2
+    /       time
+    /         | (02/24)
+    /   td.twelve.wide
+    /     p
+    /       | 本年の伊勢湾カップは、8月6日、7日の両日に開催いたします。
+    /         新舞子の海で皆様にお会いできることを思い、実行委員会として
+    /         海のレースとして最高のパフォーマンスを発揮できるよう、準備をいたしております。
+    /     p
+    /       |
+    /         なお、シード選手ならびに各地区の予選大会については近日中に発表いたしますので、もうしばらくお待ちください。
 
     - @notices.each do |notice|
       tr.top.aligned
         td.four.wide.large.bold.text style="text-indent: 0;"
-          = notice.title
-          / br
+          = markdown(notice.title)
           small
             time
               = pretty_date(notice.created_at)
         td.twelve.wide
-          p
-            = notice.body
+          = markdown(notice.body)

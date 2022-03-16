@@ -1,42 +1,40 @@
 section#landing
 
-  h1.ui.center.aligned.h1.header
-    | 伊勢湾カップ 2022
-    - if logged_in?
-      = link_to "一覧", landings_path, class: "ui primary button ml-5"
+  - if logged_in?
+    .ui.container
+      .ui.right.aligned.header.mt-5.mb-5
+        = link_to "編輯", landings_path, class: "ui primary button"
 
-  p.ui.center.aligned.h2.header
-    | 新舞子の碧い海&nbsp;
-    br.mobile.only
-    | 集う若人&nbsp;
-    br.mobile.only
-    | 競う技術
+  / h1.ui.center.aligned.h1.header
+  /   | 伊勢湾カップ 2022
+  /
+  / p.ui.center.aligned.h2.header
+  /   | 新舞子の碧い海&nbsp;
+  /   br.mobile.only
+  /   | 集う若人&nbsp;
+  /   br.mobile.only
+  /   | 競う技術
+  /
+  / p.ui.center.aligned.h3.header
+  /   | 8月6日(土)～7日(日)
+  /
+  / .ui.text.container
+  /   p
+  /     |
+  /       本年の伊勢湾カップは、8月6日、7日の両日に開催いたします。
+  /   p
+  /     |
+  /       新舞子の海で皆様にお会いできることを思い、実行委員会として海のレースとして最高のパフォーマンスを発揮できるよう、準備をいたしております。
+  /   p
+  /     |
+  /       なお、シード選手並びに各地区の予選大会については近日中に発表いたしますので、もうしばらくお待ちください。
+  /
+  / .ui.right.aligned.container
+  /   p
+  /     | 令和4年2月23日
+  /     br
+  /     | 伊勢湾カップ実行委員会
 
-  p.ui.center.aligned.h3.header
-    | 8月6日(土)～7日(日)
-
+  = markdown(@landing.title)
   .ui.text.container
-    p
-      |
-        本年の伊勢湾カップは、8月6日、7日の両日に開催いたします。
-    p
-      |
-        新舞子の海で皆様にお会いできることを思い、実行委員会として海のレースとして最高のパフォーマンスを発揮できるよう、準備をいたしております。
-    p
-      |
-        なお、シード選手並びに各地区の予選大会については近日中に発表いたしますので、もうしばらくお待ちください。
-
-  .ui.right.aligned.container
-    / p.ui.right.aligned.small.header style="font-weight: normal;"
-    p
-      | 令和4年2月23日
-      br
-      | 伊勢湾カップ実行委員会
-
-
-
-  p.ui.center.aligned.h2.header
-    = @landing.title
-
-  p.ui.text.container
-    = @landing.body
+    = markdown(@landing.body)
