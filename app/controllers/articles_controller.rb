@@ -50,8 +50,6 @@ class ArticlesController < ApplicationController
       if @article.update(article_params)
         # format.html { redirect_to article_url(@article), notice: "Article was successfully updated." }
         format.html { redirect_to polymorphic_path([@article.class]), notice: "Article was successfully updated." }
-        # format.html { redirect_to url_for(:index), notice: "Article was successfully updated." }
-        # format.html { redirect_to root_path, notice: "Article was successfully updated." }
         format.json { render :show, status: :ok, location: @article }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -62,10 +60,11 @@ class ArticlesController < ApplicationController
 
   # DELETE /articles/1 or /articles/1.json
   def destroy
+    klass = @article.class
     @article.destroy
-
     respond_to do |format|
-      format.html { redirect_to articles_url, notice: "Article was successfully destroyed." }
+      # format.html { redirect_to articles_url, notice: "Article was successfully destroyed." }
+      format.html { redirect_to polymorphic_path([klass]), notice: "Article was successfully destroyed." }
       format.json { head :no_content }
     end
   end
