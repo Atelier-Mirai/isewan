@@ -2,6 +2,8 @@ section#landing
 
   h1.ui.center.aligned.h1.header
     | 伊勢湾カップ 2022
+    - if logged_in?
+      = link_to "一覧", landings_path, class: "ui primary button ml-5"
 
   p.ui.center.aligned.h2.header
     | 新舞子の碧い海&nbsp;
@@ -30,3 +32,11 @@ section#landing
       | 令和4年2月23日
       br
       | 伊勢湾カップ実行委員会
+
+
+
+  p.ui.center.aligned.h2.header
+    = @landing.title
+
+  p.ui.text.container
+    = @landing.body

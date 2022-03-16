@@ -1,0 +1,2 @@
+class Notice < Article
+end

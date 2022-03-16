@@ -1,2 +1,0 @@
-class News < Article
-end

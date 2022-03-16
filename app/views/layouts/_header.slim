@@ -8,7 +8,7 @@ header.header.ui.large.top.fixed.menu.scroll_header_menu.computer.only.bg-sakura
           | 伊勢湾カップ
 
     .right.item
-      = link_to '#news', class: 'item' do
+      = link_to '#notice', class: 'item' do
         i.fa-regular.fa-newspaper.fa-lg.fa-fw
         | 新着情報
       = link_to '#preliminary', class: 'item' do
@@ -20,6 +20,10 @@ header.header.ui.large.top.fixed.menu.scroll_header_menu.computer.only.bg-sakura
       = link_to '#gallery', class: 'item' do
         i.fa-solid.fa-photo-film.fa-lg.fa-fw
         | 写真・動画
+      - if logged_in?
+        = link_to logout_path, method: :destroy do
+          .ui.small.red.button
+            | Logout
 
 css:
   .ui.menu .item:before {
@@ -63,7 +67,7 @@ header.header.scroll_header_menu.mobile.only
                 = image_tag 'isewan_logo_2s.webp'
                 | 伊勢湾カップ
         li
-          = link_to '#news', class: 'item' do
+          = link_to '#notice', class: 'item' do
             i.fa-regular.fa-newspaper.fa-lg.fa-fw
             | 新着情報
         li

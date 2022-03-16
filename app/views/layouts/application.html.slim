@@ -39,12 +39,20 @@ html
     / 先頭に戻る
     = javascript_include_tag "page_top", "data-turbo-track": "reload"
 
+    / Fomantic UI transition
+    = javascript_include_tag "transition", "data-turbo-track": "reload"
+
     / Smooth Scroll ページ内リンクをクリックすると滑らかにスクロールする
     script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"
 
   body
     = render "layouts/header"
-    = semantic_flash
+    .ui.container
+      = semantic_flash
+      / <div class="ui success message">
+      /   <i class="close icon"></i>
+      /   | login successful
+      / </div>
 
     = yield
 
@@ -53,9 +61,20 @@ html
 
   // スムーススクロール
   javascript:
-    let scroll = new SmoothScroll('a[href*="#"]', {
+    // let scroll = new SmoothScroll('a[href*="#"]', {
+    //   easing:'easeInOutQuint'
+    // })
+    new SmoothScroll('a[href*="#"]', {
       easing:'easeInOutQuint'
     })
+
+    // flashをxボタンで消せる
+    $('.message .close').on('click', function() {
+      $(this).closest('.message').transition('fade');
+      // $(this).closest('.message').fadeTo("slow", 1, function(){
+      //   $(this).addClass("transition hidden");
+      // });
+    });
 
   - if Rails.env.development?
     .ui.container style="margin-top: 5rem;"

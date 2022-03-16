@@ -2,9 +2,9 @@
 //-----------------------------------------------------------------------
 const pageTopAnimation = () => {
   // scroll という変数に、ウィンドウのスクロール量を取得して、代入する。
-  let scroll = $(window).scrollTop();
+  let scrollValue = $(window).scrollTop();
   // もしスクロール量が200px以上ならば
-  if (scroll >= 200){
+  if (scrollValue >= 200){
     // #page-top に付与した dodownward というクラス名を除く
     $("#page_top").removeClass("downward");
     // #page-top に upward というクラス名を付与する

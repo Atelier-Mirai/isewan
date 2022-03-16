@@ -1,5 +1,7 @@
-h2.ui.h2.header#news.mt-5
+h2.ui.h2.header#notice.mt-5
   | 新着情報
+  - if logged_in?
+    = link_to "一覧", notices_path, class: "ui primary button ml-5"
 
 css:
   th {
@@ -12,10 +14,11 @@ css:
 table.ui.blue.table
   tbody
     tr.top.aligned
-      th.four.wide
-        | 第39回伊勢湾カップ2022 開催のお知らせ
+      th.four.wide.large.text
+        | 第39回伊勢湾カップ2022
         br
-        small
+        | 開催のお知らせ
+        small.pl-2
           time
             | (02/24)
       td.twelve.wide
@@ -27,13 +30,14 @@ table.ui.blue.table
           |
             なお、シード選手ならびに各地区の予選大会については近日中に発表いたしますので、もうしばらくお待ちください。
 
-    / tr.top.aligned
-    /   th.four.wide
-    /     = @news.first.title
-    /     br
-    /     small
-    /       time
-    /         = @news.first.created_at
-    /   td.twelve.wide
-    /     p
-    /       = @news.first.body
+    - @notices.each do |notice|
+      tr.top.aligned
+        td.four.wide.large.bold.text style="text-indent: 0;"
+          = notice.title
+          / br
+          small
+            time
+              = pretty_date(notice.created_at)
+        td.twelve.wide
+          p
+            = notice.body

@@ -1,0 +1,56 @@
+.ui.container
+  h1 ="#{@type} 一覧"
+
+  table.ui.blue.table
+    thead
+      tr
+        th.four.wide title
+        th.eleven.wide body
+        th.one.wide display
+    tbody
+        - @articles.each do |article|
+          = form_with model: article, method: :patch do |f|
+            tr.top.aligned
+              td.ui.form
+                = f.text_area :title, rows: 3
+              td.ui.form
+                = f.text_area :body
+              td.ui.form.top.aligned
+                = f.check_box :display, class: "ui checkbox"
+                br
+                br
+                br
+                br
+                br
+                br
+                br
+                = f.submit "更新", class: "ui tiny primary button"
+
+  table.ui.blue.table
+    tbody
+      / = form_with model: @article do |f|
+      = form_with model: @article do |f|
+        tr.top.aligned
+          td.ui.form.four.wide
+            = f.text_area :title, rows: 3
+          td.ui.form.eleven.wide
+            = f.text_area :body
+          td.ui.form.one.wide.top.aligned
+            = f.check_box :display, class: "ui checkbox"
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            = f.submit "追加", class: "ui tiny teal button"
+
+          / td = link_to 'Show', article
+          / td = link_to 'Edit', edit_article_path(article)
+          / td = link_to 'Destroy', article, data: { confirm: 'Are you sure?' }, method: :delete
+
+  = link_to "トップページ", root_path, class: "ui small primary button"
+
+javascript:
+  $(".ui.checkbox").checkbox();

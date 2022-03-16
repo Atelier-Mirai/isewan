@@ -1,6 +1,9 @@
 h2.ui.header#about.mt-5
   | 伊勢湾カップとは
+  - if logged_in?
+    = link_to "一覧", abouts_path, class: "ui primary button ml-5"
 
 .ui.blue.segment
   p
-    | 1983年(昭和58年)より開催。今年で39回目を迎えた国内有数のウィンドサーフィンの祭典です。
+    = @about.body
+    / | 1983年(昭和58年)より開催。今年で39回目を迎えた国内有数のウィンドサーフィンの祭典です。

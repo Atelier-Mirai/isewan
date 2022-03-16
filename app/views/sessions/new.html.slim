@@ -1,0 +1,95 @@
+/ h1 Login
+/
+/ = form_with url: login_path, method: :post do |f|
+/   .field
+/     = f.label :name
+/     = f.text_field :name
+/   .field
+/     = f.label :password
+/     = f.password_field :password
+/   .actions
+/     = f.submit "Login"
+
+
+.ui.middle.aligned.center.aligned.grid
+  .column
+    h2.ui.teal.image.header
+      = image_tag "isewan_logo_2s.webp", class: "image"
+      .content
+        |  Log-in to your account
+    / form.ui.large.form
+    = form_with url: login_path, method: :post , class: "ui large form" do |f|
+      .ui.stacked.segment
+        .field
+          .ui.left.icon.input
+            i.fa-solid.fa-user-astronaut
+            = f.text_field :name, placeholder: "Enter your name"
+            / input type="text" name="email" placeholder="E-mail address"
+        .field
+          .ui.left.icon.input
+            i.fa-solid.fa-key
+            = f.password_field :password, placeholder: "Password"
+            / input type="password" name="password" placeholder="Password"
+        / .ui.fluid.large.teal.submit.button
+          / | Login
+        .actions
+          = f.submit "Login", class: "ui fluid large teal submit button"
+      .ui.error.message
+
+    / .ui.message
+    /   |  New to us?
+    /   a href="#"
+    /     | Sign Up
+
+
+css:
+
+  .fa-solid {
+    left: 10px;
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    width: 10%;
+    margin-top: -0.5em;
+    font-size: 1.5em;
+  }
+
+  body>.grid {
+    height: 50%;
+  }
+
+  .image {
+    margin-top: -100px;
+  }
+
+  .column {
+    max-width: 450px;
+  }
+
+javascript:
+  $('.ui.form').form({
+    fields: {
+      email: {
+        identifier: 'email',
+        rules: {
+          type: 'empty',
+          prompt: 'Please enter your e-mail'
+        },
+        {
+          type: 'email',
+          prompt: 'Please enter a valid e-mail'
+        }
+      },
+      password: {
+        identifier: 'password',
+        rules: {
+          type: 'empty',
+          prompt: 'Please enter your password'
+        },
+        {
+          type: 'length 6',
+          prompt: 'Your password must be at least 6 characters'
+        }
+      }
+    }
+  });

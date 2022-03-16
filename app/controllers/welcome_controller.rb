@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    @landing = Landing.first
-    @about   = About.first
-    @news    = News.all.where(display: true)
+    @landing = Landing.recent.first
+    @about   = About.recent.first
+    @notices = Notice.recent
   end
 end

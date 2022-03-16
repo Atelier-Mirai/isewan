@@ -10,5 +10,5 @@ import $ from "jquery"
 //= require semantic-ui
 
 $(()=>{
-  console.log('hello');
+  console.log('hello application.js');
 })
