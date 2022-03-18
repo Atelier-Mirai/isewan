@@ -6,7 +6,7 @@
   .right.floated.right.aligned.six.wide.column
     .ui
       - if logged_in?
-        / = link_to "編輯", events_path, class: "ui primary button"
+        = link_to "編輯", events_path, class: "ui primary button"
 
 table.ui.blue.table
   thead
@@ -15,66 +15,21 @@ table.ui.blue.table
       th レース名 / 場所
       th 問い合わせ
   tbody
-    tr
-      td.center.aligned
-        |
-          7/2(土)〜7/3(日)
-      td.center.aligned
-        | テクノクラス、国体WS級中部選手権大会
-        br
-        | 愛知県知多市新舞子
-      td.right.aligned
-        = link_to "https://isewan.herokuapp.com" do
-          .ui.blue.tertiary.button
-            | 大会事務局
-        br
-        = link_to "tel:090-1476-2206" do
-          .ui.blue.tertiary.button
-            | 090-1476-2206
-        br
-        = link_to "mailto:ayf-wind@sd5.so-net.ne.jp" do
-          .ui.blue.tertiary.button
-            | ayf-wind@sd5.so-net.ne.jp
-    tr
-      td.center.aligned
-        |
-          7/2(土)〜7/3(日)
-      td.center.aligned
-        | テクノクラス、国体WS級中部選手権大会
-        br
-        | 愛知県知多市新舞子
-      td.right.aligned
-        = link_to "https://isewan.herokuapp.com" do
-          .ui.blue.tertiary.button
-            | 大会事務局
-        br
-        = link_to "tel:090-1476-2206" do
-          .ui.blue.tertiary.button
-            | 090-1476-2206
-        br
-        = link_to "mailto:ayf-wind@sd5.so-net.ne.jp" do
-          .ui.blue.tertiary.button
-            | ayf-wind@sd5.so-net.ne.jp
+
+  - @preliminarys.each do |event|
     tr.top.aligned
       td.center.aligned
-        |
-          7/2(土)〜7/3(日)top
+        = competitions_date(event.start_date, event.end_date)
       td.center.aligned
-        | テクノクラス、国体WS級中部選手権大会
+        = event.name
         br
-        | 愛知県知多市新舞子
+        = event.place
       td.right.aligned
-        = link_to "https://isewan.herokuapp.com" do
-          .ui.blue.tertiary.button
-            | 大会事務局
+        = decorated_contact(event.contact, event.url)
         br
-        = link_to "tel:090-1476-2206" do
-          .ui.blue.tertiary.button
-            | 090-1476-2206
+        = decorated_phone(event.phone)
         br
-        = link_to "mailto:ayf-wind@sd5.so-net.ne.jp" do
-          .ui.blue.tertiary.button
-            | ayf-wind@sd5.so-net.ne.jp
+        = decorated_email(event.email)
 
 h2.ui.header#regional.mt-5
   | 愛知の大会
@@ -85,18 +40,19 @@ table.ui.blue.table
       th 開催日
       th レース名 / 場所
       th 問い合わせ
+
   tbody
-    tr
+  - @regionals.each do |event|
+    tr.top.aligned
       td.center.aligned
-        |
-          7/2(土)〜7/3(日)
+        = competitions_date(event.start_date, event.end_date)
       td.center.aligned
-        | テクノクラス、国体WS級中部選手権大会
+        = event.name
         br
-        | 愛知県知多市新舞子
+        = event.place
       td.right.aligned
-        | 大会事務局
+        = decorated_contact(event.contact, event.url)
         br
-        | 090-1476-2206
+        = decorated_phone(event.phone)
         br
-        | ayf-wind@sd5.so-net.ne.jp
+        = decorated_email(event.email)

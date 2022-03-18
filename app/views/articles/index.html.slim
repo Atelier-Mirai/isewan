@@ -3,10 +3,10 @@
 
   table.ui.blue.table
     thead
-      tr
-        th.four.wide title
-        th.eleven.wide body
-        th.one.wide display
+      tr.center.aligned
+        th.four.wide 見出し
+        th.eleven.wide 本文
+        th.one.wide
     tbody
         - @articles.each do |article|
           = form_with model: article, method: :patch do |f|
@@ -52,6 +52,14 @@
 .ui.container
   .ui.right.aligned.header.mt-5.mb-5
     = link_to "トップページ", root_path, class: "ui small primary button"
+
+.ui.container
+  details.ui.segment
+    summary.ui.h2.header
+      | Markdown 記法
+
+    .div
+      = render 'markdown_explanation'
 
 javascript:
   $(".ui.checkbox").checkbox();

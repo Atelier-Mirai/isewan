@@ -21,7 +21,7 @@ header.header.ui.large.top.fixed.menu.scroll_header_menu.computer.only.bg-sakura
         i.fa-solid.fa-photo-film.fa-lg.fa-fw
         | 写真・動画
       - if logged_in?
-        = link_to logout_path, method: :destroy do
+        = link_to logout_path, method: :delete do
           .ui.small.red.button
             | Logout
 

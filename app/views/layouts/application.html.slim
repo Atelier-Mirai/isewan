@@ -8,7 +8,13 @@ html
     = csp_meta_tag
 
     / ファビコン
-    / = favicon_link_tag asset_path("favicon.ico")
+    = favicon_link_tag "favicon.ico"
+    = favicon_link_tag 'apple-touch-icon-180x180.png',
+                  rel:   'apple-touch-icon',
+                  sizes: '180x180',
+                  type:  'image/png'
+
+    meta content="伊勢湾カップとは、昭和58年より開催、今年で39回目を迎える国内有数のウィンドサーフィンの祭典です。毎年夏に愛知県知多市新舞子海岸沖で行われます。" name="description"
 
     / Modaal
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.css"
@@ -19,18 +25,10 @@ html
     / ハンバーガーメニュー
     = stylesheet_link_tag "hamburgers", "data-turbo-track": "reload"
 
-    / スクロール時にヘッダー出現
-    / = javascript_include_tag "scroll_header_menu", "data-turbo-track": "reload"
-
     / 伊勢湾カップのためのスタイルシート
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
 
     = javascript_importmap_tags
-
-    / script
-    /   $(() => {
-    /     console.log("Hello Rails 7! aa");
-    /   })
 
     / jQuery
     script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -75,6 +73,10 @@ html
       //   $(this).addClass("transition hidden");
       // });
     });
+
+    // チェックボックス・ラジオボタン
+    // $(".ui.checkbox").checkbox();
+
 
   - if Rails.env.development?
     .ui.container style="margin-top: 5rem;"
