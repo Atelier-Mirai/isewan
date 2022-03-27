@@ -24,6 +24,15 @@ table.ui.blue.table
         = event.name
         br
         = event.place
+        br
+        = decorated_url(event.nor_url, "NOR")
+        / br
+        = decorated_pdfs(event.nor_pdfs, "NOR")
+        / br
+        = decorated_url(event.result_url, "RESULT")
+        / br
+        = decorated_pdfs(event.result_pdfs, "RESULT")
+
       td.right.aligned
         = decorated_contact(event.contact, event.url)
         br

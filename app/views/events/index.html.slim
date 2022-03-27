@@ -1,5 +1,6 @@
 .ui.container
-  h1 予選大会・愛知の大会一覧
+  h1
+    | 予選大会・愛知の大会一覧
 
   table.ui.blue.table
     thead
@@ -37,9 +38,42 @@
                 br
                 = f.text_field :place, placeholder: "場所"
                 br
-                = f.text_field :nor, placeholder: "NOR(募集要項)"
+                = f.text_field :nor_url, placeholder: "NOR(募集要項)"
                 br
-                = f.text_field :result, placeholder: "リザルト(結果)"
+                = f.text_field :result_url, placeholder: "リザルト(結果) URL"
+                br
+
+                - if event.nor_pdfs.attached?
+                  - event.nor_pdfs.each do |pdf|
+                    = link_to rails_blob_path(pdf, disposition: "attachment") do
+                        = pdf.filename.to_s
+                    .ui.checkbox
+                      = f.check_box :nor_pdf_ids, { multiple: true }, pdf.id, false
+                      = f.label "nor_pdf_ids_#{pdf.id}"
+                        | 削除
+                = f.file_field :nor_pdfs, accept: 'application/pdf',  multiple: true, id: "embed_file_input#{event.id}", class: "embed_file_input", data: {id: event.id }
+                .ui.fluid.action.input
+                  input disabled="disabled" placeholder="NOR(募集要項)PDF" type="text" id="filenames_display_area#{event.id}" class="filenames_display_area"
+                  label.ui.small.teal.left.floated.button for="embed_file_input#{event.id}"
+                    = semantic_icon('upload')
+                    | 選択
+
+                - if event.result_pdfs.attached?
+                  - event.result_pdfs.each do |pdf|
+                    = link_to rails_blob_path(pdf, disposition: "attachment") do
+                        = pdf.filename.to_s
+                    .ui.checkbox
+                      = f.check_box :result_pdf_ids, { multiple: true }, pdf.id, false
+                      = f.label "nor_result_ids_#{pdf.id}"
+                        | 削除
+                - rid = event.id + 1000
+                = f.file_field :result_pdfs, accept: 'application/pdf',  multiple: true, id: "embed_file_input#{rid}", class: "embed_file_input", data: {id: rid }
+                .ui.fluid.action.input
+                  input disabled="disabled" placeholder="リザルト(結果) PDF" type="text" id="filenames_display_area#{rid}" class="filenames_display_area"
+                  label.ui.small.teal.left.floated.button for="embed_file_input#{rid}"
+                    = semantic_icon('upload')
+                    | 選択
+
 
               td.ui.form rowspan="3"
                 = f.text_field :contact, placeholder: "問い合わせ"
@@ -89,9 +123,25 @@
             br
             = f.text_field :place, placeholder: "場所"
             br
-            = f.text_field :nor, placeholder: "NOR(募集要項)"
+            = f.text_field :nor_url, placeholder: "NOR(募集要項)"
             br
-            = f.text_field :result, placeholder: "リザルト(結果)"
+            = f.text_field :result_url, placeholder: "リザルト(結果)"
+
+            - nid = Event.ids.max + 1
+            - rid = nid + 1000
+            = f.file_field :nor_pdfs, accept: 'application/pdf',  multiple: true, id: "embed_file_input#{nid}", class: "embed_file_input", data: {id: nid }
+            .ui.fluid.action.input
+              input disabled="disabled" placeholder="NOR(募集要項) PDF" type="text" id="filenames_display_area#{nid}" class="filenames_display_area"
+              label.ui.small.teal.left.floated.button for="embed_file_input#{nid}"
+                = semantic_icon('upload')
+                | 選択
+            = f.file_field :result_pdfs, accept: 'application/pdf',  multiple: true, id: "embed_file_input#{rid}", class: "embed_file_input", data: {id: rid }
+            .ui.fluid.action.input
+              input disabled="disabled" placeholder="リザルト(結果) PDF" type="text" id="filenames_display_area#{rid}" class="filenames_display_area"
+              label.ui.small.teal.left.floated.button for="embed_file_input#{rid}"
+                = semantic_icon('upload')
+                | 選択
+
 
           td.ui.form rowspan="2"
             = f.text_field :contact, placeholder: "問い合わせ"
@@ -112,3 +162,30 @@
 .ui.container
   .ui.right.aligned.header.mt-5.mb-5
     = link_to "トップページ", root_path, class: "ui small primary button"
+
+css:
+  input[type="file"] {
+    display: nonedesu;
+  }
+
+javascript:
+  // "embed_file_input" クラス属性の要素を取得する。(画像選択ボタン)
+  input_files = document.getElementsByClassName("embed_file_input");
+
+  for (let input_file of input_files) {
+    let id = input_file.dataset.id;
+    input_file.addEventListener("change", function(){
+      let filenames_display_area =
+        document.getElementById(`filenames_display_area${id}`);
+      // FileList オブジェクトを取得する
+      let file_lists = this.files;
+      // 画像ファイル名格納用の配列
+      let file_names = []
+      for (let i = 0; i < file_lists.length; i++) {
+        // File オブジェクトより、画像ファイル名を取得する
+        file_names.push(file_lists[i].name)
+      }
+      // 選択ファイル名表示領域に、画像ファイル名を書き出す
+      filenames_display_area.value = file_names.join(', ')
+    });
+  }

@@ -14,6 +14,33 @@ module ApplicationHelper
     h(str).gsub(/(\r\n?)|(\n)/, "<br>").html_safe
   end
 
+  def decorated_url(url, text)
+    if url.present?
+      link_to url do
+        tag.div(class: "ui blue tertiary button") do
+          text
+        end
+      end
+    end
+  end
+
+  def decorated_pdfs(pdfs, text)
+    html = []
+    if pdfs.attached?
+      pdfs.each do |pdf|
+        url = Rails.application.routes.url_helpers.rails_blob_path(pdf, disposition: "attachment")
+        link =
+          link_to url do
+            tag.div(class: "ui blue tertiary button") do
+              text
+            end
+          end.html_safe
+        html << link
+      end
+    end
+    html.join("br").html_safe
+  end
+
   def competitions_date(start_date, end_date)
     s = pretty_date(start_date, wday: true)
     s << "〜#{pretty_date(end_date, wday: true)}" if end_date

@@ -8,8 +8,8 @@ class CreateEvents < ActiveRecord::Migration[7.0]
 
       t.string  :name       # 大会名
       t.string  :place      # 開催場所
-      t.string  :nor        # NOR(募集要項)
-      t.string  :result     # リザルト(結果)
+      t.string  :nor_url    # NOR(募集要項)
+      t.string  :result_url # リザルト(結果)
 
       t.string  :contact    # 問い合わせ先
       t.string  :phone      # 問い合わせ先電話番号
