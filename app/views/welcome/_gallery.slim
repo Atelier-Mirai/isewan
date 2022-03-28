@@ -13,28 +13,31 @@
     - n = sprintf("%02d", number)
     = link_to asset_path("#{n}.webp"), data: { group: "photo", modaal_desc: "Test image"}, class: "photo"
       = image_tag "#{n}_s.webp"
+      p.center.aligned.text
+        = "sample"
 
 h2.ui.header.mt-5
   | 動画
-
-css:
-  .modaal-inner-wrapper {
-    padding: 0 !important;
-  }
-  .modaal-video-wrap {
-    margin: 10px !important;
-  }
-
 
 .ui.blue.segment.gallery
   - %w(2015 2016 2017day1 2017day2 2018 2019).each do |movie|
     = link_to "https://player.vimeo.com/video/142216434", data: { group: "movie", modaal_desc: "Test movie"}, class: "movie"
       = image_tag "#{movie}_s.webp"
 
+/ css:
+/   .modaal-inner-wrapper {
+/     padding: 0 !important;
+/   }
+/   .modaal-video-wrap {
+/     margin: 10px !important;
+/   }
+
 javascript:
   $('.photo').modaal({
     type: 'image'
   });
   $('.movie').modaal({
-    type: 'video'
+    type: 'video',
+    width: 700,
+	  height: 500
   });

@@ -41,6 +41,22 @@ $sizes: (
   font-weight: bold;
 }
 
+.left.aligned.text {
+  text-align: left;
+}
+
+.center.aligned.text {
+  text-align: center;
+}
+
+.right.aligned.text {
+  text-align: right;
+}
+
+.justified.text {
+  text-align: justify;
+}
+
 /*-----------------------------------------------------------------------------
   デスクトップ版
 -----------------------------------------------------------------------------*/
