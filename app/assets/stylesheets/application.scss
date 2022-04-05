@@ -3,3 +3,7 @@
 @use "foundation" as *;
 
 @import "semantic-ui";
+
+html, body {
+  font-family: 'Kaisei HarunoUmi', serif !important;
+}

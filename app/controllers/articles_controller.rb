@@ -7,14 +7,7 @@ class ArticlesController < ApplicationController
 
     @articles = Article.where(type: @type).sorted
 
-    # @article = Landing.new
-    # @article = About.new
-    # @article = Notice.new
     @article = @type.to_s.constantize.new
-  end
-
-  # GET /articles/1 or /articles/1.json
-  def show
   end
 
   # GET /articles/new
@@ -22,39 +15,24 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  # GET /articles/1/edit
-  def edit
-  end
-
   # POST /articles or /articles.json
   def create
-    # @article = Notice.new(article_params)
     klass = params[:type].capitalize.to_s.constantize
     @article = klass.new(article_params)
 
-    respond_to do |format|
-      if @article.save
-        # format.html { redirect_to article_url(@article), notice: "Article was successfully created." }
-        format.html { redirect_to polymorphic_path([@article.class]), notice: "Article was successfully created." }
-        format.json { render :show, status: :created, location: @article }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
+    if @article.save
+      redirect_to polymorphic_path([@article.class]), notice: "Article was successfully created."
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
-    respond_to do |format|
-      if @article.update(article_params)
-        # format.html { redirect_to article_url(@article), notice: "Article was successfully updated." }
-        format.html { redirect_to polymorphic_path([@article.class]), notice: "Article was successfully updated." }
-        format.json { render :show, status: :ok, location: @article }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
+    if @article.update(article_params)
+      redirect_to polymorphic_path([@article.class]), notice: "Article was successfully updated."
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -62,11 +40,7 @@ class ArticlesController < ApplicationController
   def destroy
     klass = @article.class
     @article.destroy
-    respond_to do |format|
-      # format.html { redirect_to articles_url, notice: "Article was successfully destroyed." }
-      format.html { redirect_to polymorphic_path([klass]), notice: "Article was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to polymorphic_path([klass]), notice: "Article was successfully destroyed."
   end
 
   private

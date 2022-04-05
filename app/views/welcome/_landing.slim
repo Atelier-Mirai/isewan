@@ -35,6 +35,32 @@ section#landing
   /     br
   /     | 伊勢湾カップ実行委員会
 
-  = markdown(@landing.title)
-  .ui.text.container
-    = markdown(@landing.body)
+
+
+
+  / 全画面で絵が切り替わるヒーローイメージ
+  #vegas-slider
+    = markdown(@landing.title)
+    .ui.text.container
+      = markdown(@landing.body)
+
+  / スクロールを促す為のアニメーション
+  .scroll.down
+    span
+      | Scroll
+
+javascript:
+  $('#vegas-slider').vegas({
+    overlay: true,
+    transition: 'blur',
+    transitionDuration: 2000,
+    delay: 10000,
+    animationDuration: 20000,
+    animation: 'kenburns',
+    slides: [{ src: "#{asset_path 'vegas1.webp'}"},
+             { src: "#{asset_path 'vegas2.webp'}"},
+             { src: "#{asset_path 'vegas3.webp'}"},
+             { src: "#{asset_path 'vegas4.webp'}"},
+             // { src: "#{asset_path 'vegas5.webp'}"},
+             { src: "#{asset_path 'vegas6.webp'}"}]
+  });

@@ -16,6 +16,14 @@ html
 
     meta content="伊勢湾カップとは、昭和58年より開催、今年で39回目を迎える国内有数のウィンドサーフィンの祭典です。毎年夏に愛知県知多市新舞子海岸沖で行われます。" name="description"
 
+    / Google Fonts
+    link rel="preconnect" href="https://fonts.googleapis.com"
+    link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"
+    link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"
+    link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Raleway&display=swap" rel="stylesheet"
+
+
+
     / Modaal
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.css"
 
@@ -36,6 +44,12 @@ html
     script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"
     / 先頭に戻る
     = javascript_include_tag "page_top", "data-turbo-track": "reload"
+    / Vegas - Fullscreen Backgrounds and Slideshows.
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.css"
+    = stylesheet_link_tag "vegas_custom", "data-turbo-track": "reload"
+    script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.js"
+    = javascript_include_tag "vegas_custom", "data-turbo-track": "reload"
+    = javascript_include_tag "glow_text", "data-turbo-track": "reload"
 
     / Fomantic UI transition
     = javascript_include_tag "transition", "data-turbo-track": "reload"

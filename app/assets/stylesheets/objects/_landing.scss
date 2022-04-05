@@ -1,22 +1,23 @@
 @use "utilities" as *;
 
 #landing {
-  width: 100vw;
-  margin-top: 60px;
-  height: calc(100vh - 60px + 5px);
-  background-image: url("yacht_blur.webp");
-  background-size: cover;
-  background-position: 10% 50%;
-
   .h1 {
-    color: $utsushiiro;
-    font-size: clamp(32px, 10vw, 48px);
-    text-shadow: 2px 2px 2px $amairo;
+    // color: $utsushiiro;
+    // text-shadow: 2px 2px 2px $amairo;
+    // color: $amairo;
+    // text-shadow: 2px 2px 2px $utsushiiro;
+    // text-shadow:
+    //        4px 4px $sakurairo;
 
-    padding-top: 7vh;
+    color: transparent;
+    background: linear-gradient(90deg, #a38131 0%, #e7c76d 33%, #ffe6c5 62%, #e3c05d 83%, #9d874e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bold;
   }
 
-  .h2, .h3 {
+  .h2,
+  .h3 {
     color: $sakurairo;
     text-shadow: 2px 2px 2px $kurohairo;
   }
@@ -34,14 +35,10 @@
 
   p {
     text-indent: 1em;
-  }
-
-  @media (min-width: 768px) {
-    margin-top: 0;
-    height: 100vh;
-
-    .ui.text.container {
-      margin-top: 5vh;
-    }
+    color: black;
+    font-weight: bold;
+    text-shadow:
+           3px 3px 5px white, -3px -3px 5px white,
+          -3px 3px 5px white,  3px -3px 5px white;
   }
 }

@@ -1,0 +1,69 @@
+@use "utilities" as *;
+
+/* スクロールを促す
+-----------------------------------------------------------------------------*/
+.scroll.down {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
+
+/* Scrollという文字表示の設定 */
+.scroll.down span {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+
+  color: $sakurairo;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scroll.down::before {
+  content: "";
+
+  /* 描画位置 */
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+
+  /* 丸の形状 */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $sakurairo;
+
+  /* 丸の動き */
+  animation:
+    circlemove 1.6s ease-in-out infinite,
+    circlemovehide 1.6s ease-in-out infinite,
+}
+
+@keyframes circlemove {
+    0% { bottom: 45px; }
+  100% { bottom: -5px; }
+}
+
+@keyframes circlemovehide {
+    0% { opacity: 0; }
+   50% { opacity: 1; }
+   80% { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+
+/* 線の描写 */
+.scroll.down::after {
+  content: "";
+
+  /* 表示位置 */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  /* 線の形状 */
+  width: 2px;
+  height: 50px;
+  background: $sakurairo;
+}

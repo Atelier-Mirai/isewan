@@ -7,9 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Landing.create(
-  title: '<h1 class="ui center aligned h1 header">伊勢湾カップ 2022</h1>
-<p class="ui center aligned h2 header">新舞子の碧い海&nbsp;<br class="mobile only">集う若人&nbsp;<br class="mobile only">競う技術</p>
-<p class="ui center aligned h3 header">8月6日(土)～7日(日)</p>',
+  title: '<h1 class="ui center aligned h1 header mb-0">伊勢湾カップ 2022</h1>
+<p class="ui center aligned h2 header mb-0">新舞子の碧い海&nbsp;<br class="mobile only">集う若人&nbsp;競う技術</p>
+<p class="ui center aligned h3 header mb-0">8月6日(土)～7日(日)</p>',
   body: '本年の伊勢湾カップは、8月6日、7日の両日に開催いたします。
 
 新舞子の海で皆様にお会いできることを思い、実行委員会として海のレースとして最高のパフォーマンスを発揮できるよう、準備をいたしております。

@@ -7,35 +7,24 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
-  # GET /events/1 or /events/1.json
-  def show
-  end
-
   # GET /events/new
   def new
     @event = Event.new
-  end
-
-  # GET /events/1/edit
-  def edit
   end
 
   # POST /events or /events.json
   def create
     @event = Event.new(event_params(permit_nor_pdfs: true, permit_result_pdfs: true))
 
-    respond_to do |format|
-      if @event.save
-        format.html { redirect_to events_path, notice: "event was successfully created." }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-      end
+    if @event.save
+      redirect_to events_path, notice: "event was successfully created."
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /events/1 or /events/1.json
   def update
-
     nor_pdfs_flag = true
     # PDFの削除
     params[:event][:nor_pdf_ids]&.each do |id|
@@ -73,9 +62,7 @@ class EventsController < ApplicationController
   # DELETE /events/1 or /events/1.json
   def destroy
     @event.destroy
-    respond_to do |format|
-      format.html { redirect_to events_path, notice: "event was successfully destroyed." }
-    end
+    redirect_to events_path, notice: "event was successfully destroyed."
   end
 
   private
