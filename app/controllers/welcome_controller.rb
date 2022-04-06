@@ -7,5 +7,7 @@ class WelcomeController < ApplicationController
     # @events  = Event.displayed.order(start_date: :asc)
     @preliminarys = Event.displayed.preliminary.order(start_date: :asc)
     @regionals    = Event.displayed.regional.order(start_date: :asc)
+
+    @links = Link.all
   end
 end

@@ -13,7 +13,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: clamp(32px, 10vw, 48px);
+  font-size: clamp(32px, 12vw, 60px);
   letter-spacing: 0.2em;
   text-transform: uppercase;   /* (小文字でも)大文字に変換する */
   width: 100%;

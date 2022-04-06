@@ -5,5 +5,27 @@
 @import "semantic-ui";
 
 html, body {
-  font-family: 'Kaisei HarunoUmi', serif !important;
+  // font-family: 'Kaisei HarunoUmi', serif !important;
+  font-family: 'Yusei Magic', sans-serif !important;
+
+  p {
+    // font-family: 'Kaisei HarunoUmi', serif !important;
+    font-family: 'Yusei Magic', sans-serif !important;
+    // font-family: 'Yuji Boku', serif !important;
+  }
+}
+
+h1, h2, h3, h4, h5, h6,
+.ui.header {
+  // font-family: 'Kaisei HarunoUmi', serif !important;
+  // font-family: 'Yuji Boku', serif !important;
+  font-family: 'Kaisei Tokumin', serif !important;
+}
+
+.ui.table {
+  font-family: 'Yusei Magic', sans-serif !important;
+}
+
+.ui.button {
+  font-family: 'Yusei Magic', sans-serif !important;
 }

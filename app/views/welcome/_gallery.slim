@@ -17,6 +17,12 @@
       p.center.aligned.text
         = titles[number]
 
+.ui.blue.segment
+  p
+    | その他の写真はこちら
+  - @links.each do |link|
+    = decorated_url(link.url, link.text)
+
 h2.ui.header.mt-5
   | 動画
 
@@ -29,13 +35,13 @@ h2.ui.header.mt-5
       p.center.aligned.text
         = titles[index]
 
-/ css:
-/   .modaal-inner-wrapper {
-/     padding: 0 !important;
-/   }
-/   .modaal-video-wrap {
-/     margin: 10px !important;
-/   }
+css:
+  .modaal-wrapper.modaal-video  .modaal-inner-wrapper {
+    padding: 0 !important;
+  }
+  .modaal-wrapper.modaal-video .modaal-video-wrap {
+    margin: 10px !important;
+  }
 
 javascript:
   $('.photo').modaal({
