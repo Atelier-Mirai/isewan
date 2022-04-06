@@ -395,6 +395,7 @@ PLATFORMS
 DEPENDENCIES
   active_storage_validations
   activestorage-cloudinary-service
+  atk
   bcrypt (~> 3.1.7)
   better_errors
   binding_of_caller

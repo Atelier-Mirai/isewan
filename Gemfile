@@ -45,9 +45,9 @@ gem 'active_storage_validations'
 
 # PDF
 gem 'rabbit'
-
-# GTK
+# GTK(for rabbit)
 gem 'gtk3'
+gem 'atk'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
