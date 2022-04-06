@@ -74,8 +74,6 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
-    atk (3.5.1)
-      glib2 (= 3.5.1)
     autoprefixer-rails (10.4.2.0)
       execjs (~> 2)
     aws_cf_signer (0.1.3)
