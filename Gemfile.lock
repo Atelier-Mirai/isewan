@@ -404,6 +404,7 @@ DEPENDENCIES
   dartsass-rails (~> 0.3.0)
   debug
   fomantic-ui-sass
+  gtk3
   hirb
   hirb-unicode
   image_processing (~> 1.2)
