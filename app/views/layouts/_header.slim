@@ -89,9 +89,16 @@ javascript:
     document.querySelector('.navbtn.hamburger').classList.toggle('is-active');
   });
 
+  document.querySelectorAll('nav a').forEach((link) => {
+    link.addEventListener('click', () => {
+      document.querySelector('html').classList.toggle('open');
+      document.querySelector('.navbtn.hamburger').classList.toggle('is-active');
+    });
+  });
+
   // ウィンドウをスクロールした際の処理を、関数定義する。
   //-----------------------------------------------------------------------
-  const scrollHeaderMenuAnimation = () => {
+  let scrollHeaderMenuAnimation = () => {
     let scroll = $(window).scrollTop();
     if (scroll >= 200){
       $(".computer.scroll_header_menu").removeClass("disappear");

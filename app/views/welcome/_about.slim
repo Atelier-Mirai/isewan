@@ -1,12 +1,13 @@
-.ui.aligned.grid.mt-5
+#about.pt-68
+.ui.aligned.grid
   .left.floated.left.aligned.ten.wide.column
     .ui
-      h2.ui.h2.header#about
+      h2.ui.h2.header
         | 伊勢湾カップとは
   .right.floated.right.aligned.two.wide.column
     .ui
       - if logged_in?
         = link_to "編輯", abouts_path, class: "ui primary button"
 
-.ui.blue.segment.mb-5
+.ui.blue.segment.mb-0
   = markdown(@about.body)

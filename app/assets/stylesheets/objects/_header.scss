@@ -70,13 +70,11 @@
 .mobile.header {
   background: $sakurairo;
   z-index: 10;
-  // position: sticky;
   position: fixed;
   top: 0;
   display: grid;
   grid-template-columns: minmax(4%, 1fr) minmax(auto, 1166px) minmax(4%, 1fr);
   grid-template-rows: 60px;
-  // transform: translateY(-60px);
 
   > * {
     grid-column: 2;

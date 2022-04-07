@@ -1,14 +1,15 @@
-.ui.aligned.grid.mt-5
+#preliminary.pt-68
+.ui.aligned.grid
   .left.floated.left.aligned.six.wide.column
     .ui
-      h2.ui.h2.header#preliminary
+      h2.ui.h2.header
         | 予選大会
   .right.floated.right.aligned.six.wide.column
     .ui
       - if logged_in?
         = link_to "編輯", events_path, class: "ui primary button"
 
-table.ui.blue.table
+table.ui.blue.table.mb-0
   thead
     tr.center.aligned
       th 開催日
@@ -40,10 +41,11 @@ table.ui.blue.table
         br
         = decorated_email(event.email)
 
-h2.ui.header#regional.mt-5
+#regional.pt-68
+h2.ui.header.mt-0
   | 愛知の大会
 
-table.ui.blue.table
+table.ui.blue.table.mb-0
   thead
     tr.center.aligned
       th 開催日

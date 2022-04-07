@@ -12,7 +12,7 @@ Landing.create(
 <p class="ui center aligned h3 header mb-0">8月6日(土)～7日(日)</p>',
   body: '本年の伊勢湾カップは、8月6日、7日の両日に開催いたします。
 
-新舞子の海で皆様にお会いできることを思い、実行委員会として海のレースとして最高のパフォーマンスを発揮できるよう、準備をいたしております。
+新舞子の海で皆様にお会いできることを思い、実行委員会として海のレースとして最高のパフォーマンスを発揮できるよう、準備いたしております。
 
 なお、シード選手並びに各地区の予選大会については近日中に発表いたしますので、もうしばらくお待ちください。
 
@@ -41,7 +41,7 @@ Event.create([
     display: false  },
   { start_date: "2022-07-02", end_date: "2022-07-03", category: "both",
     name: "テクノクラス、国体WS級中部選手権大会", place: "愛知県知多市新舞子", nor_url: nil, result_url: nil,
-    contact: "大会事務局", phone: "090-1476-2206", url: "https://jw-a.org/wp-content/uploads/2021/06/2021cyuubu-selection2-kouji.pdf", email: "ayf-wind@sd5.so-net.ne.jp",
+    contact: "大会事務局", phone: "090-1476-2206", url: "https://isewan.herokuapp.com", email: "ayf-wind@sd5.so-net.ne.jp",
     display: true  },
   { start_date: "2022-07-10", end_date: nil, category: "both",
     name: "伊勢湾カップ新舞子セレクションレース テクノ、テクノプラス、国体WS級", place: "愛知県知多市新舞子", nor_url: nil, result_url: nil,
@@ -51,7 +51,6 @@ Event.create([
     name: "九州選手権大会", place: "大分県杵築市住吉浜リゾート", nor_url: nil, result_url: nil,
     contact: "BUZZ", phone: "0978-63-8774", url: nil, email: nil,
     display: false  },
-
   { start_date: "2022-07-09", end_date: nil, category: "regional",
     name: "国体 愛知県予選", place: "愛知県知多市新舞子", nor_url: nil, result_url: nil,
     contact: "大会事務局", phone: "090-1476-2206", url: "https://isewan.herokuapp.com", email: "ayf-wind@sd5.so-net.ne.jp",
@@ -62,8 +61,8 @@ Event.create([
     display: true  }
 ])
 
-Link.create(url: "https://photos.app.goo.gl/cK6MRBDCAZbTq6jp8", text: "2019大会開会式/一日目/二日目")
-Link.create(url: "https://photos.app.goo.gl/h3VMKmWfXDFSnR9F8", text: "2019大会表彰式/閉会式/ビーチクリーン")
+Link.create(url: "https://photos.app.goo.gl/cK6MRBDCAZbTq6jp8", text: "2019年大会開会式/一日目/二日目")
+Link.create(url: "https://photos.app.goo.gl/h3VMKmWfXDFSnR9F8", text: "2019年大会表彰式/閉会式/ビーチクリーン")
 Link.create(url: "https://photos.app.goo.gl/PgLR3QhrkDh5tsr3A", text: "2018年大会一日目")
 Link.create(url: "https://photos.app.goo.gl/vjarmKNHnezUEWox7", text: "2018大会二日目")
 Link.create(url: "https://goo.gl/photos/8Uj1DRundNEQY4yD8", text: "2017年大会一日目")

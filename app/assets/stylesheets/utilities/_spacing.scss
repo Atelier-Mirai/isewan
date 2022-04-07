@@ -2,6 +2,14 @@
 // Margin and Padding
 // Bootstrap utilities/_spacing.scss
 
+// メニューをクリックして見出しに跳んだ際の位置調整用
+.pt-68 {
+  padding-top: 60px !important;
+  @media (min-width: 768px) {
+    padding-top: 80px !important;
+  }
+}
+
 $spacers: (
   0: 0,
   1: 0.25rem,

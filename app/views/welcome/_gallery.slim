@@ -1,7 +1,8 @@
-.ui.aligned.grid.mt-5
+#gallery.pt-68
+.ui.aligned.grid
   .left.floated.left.aligned.six.wide.column
     .ui
-      h2.ui.h2.header#gallery
+      h2.ui.h2.header
         | 写真
   .right.floated.right.aligned.six.wide.column
     .ui
@@ -24,7 +25,7 @@
   - @links.each do |link|
     = decorated_url(link.url, link.text)
 
-h2.ui.header.mt-5
+h2.ui.header.mt-3
   | 動画
 
   - links = %w(https://player.vimeo.com/video/354152854 https://player.vimeo.com/video/289058532 https://player.vimeo.com/video/228689575 https://www.youtube.com/embed/e-djU8JIetg https://player.vimeo.com/video/179582374 https://www.youtube.com/embed/wKy-RSIdEWw)
