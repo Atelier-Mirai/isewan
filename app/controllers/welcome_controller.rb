@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  after_action :allow_iframe, only: [:index]
+
   def index
     @landing = Landing.recent.first
     @about   = About.recent.first
@@ -9,5 +11,11 @@ class WelcomeController < ApplicationController
     @regionals    = Event.displayed.regional.order(start_date: :asc)
 
     @links = Link.all
+  end
+
+  private
+
+  def allow_iframe
+    response.headers['Content-Security-Policy'] = "frame-ancestors 'https://vimeo.com/ https://youtu.be/'"
   end
 end
