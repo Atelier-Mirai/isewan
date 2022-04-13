@@ -58,10 +58,6 @@ html
     = render "layouts/header"
     .ui.container
       = semantic_flash
-      / <div class="ui success message">
-      /   <i class="close icon"></i>
-      /   | login successful
-      / </div>
 
     = yield
 
@@ -70,9 +66,6 @@ html
 
   // スムーススクロール
   javascript:
-    // let scroll = new SmoothScroll('a[href*="#"]', {
-    //   easing:'easeInOutQuint'
-    // })
     new SmoothScroll('a[href*="#"]', {
       easing:'easeInOutQuint'
     })
@@ -80,14 +73,10 @@ html
     // flashをxボタンで消せる
     $('.message .close').on('click', function() {
       $(this).closest('.message').transition('fade');
-      // $(this).closest('.message').fadeTo("slow", 1, function(){
-      //   $(this).addClass("transition hidden");
-      // });
     });
 
     // チェックボックス・ラジオボタン
     // $(".ui.checkbox").checkbox();
-
 
   - if Rails.env.development?
     .ui.container style="margin-top: 5rem;"

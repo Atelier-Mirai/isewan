@@ -73,7 +73,7 @@ class EventsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def event_params(permit_nor_pdfs: true, permit_result_pdfs: true)
-      permit = [:start_date, :end_date, :category, :name, :place, :nor_url, :result_url, :contact, :phone, :url, :email, :display]
+      permit = [:start_date, :end_date, :schedule_adjustment, :category, :name, :place, :nor_url, :result_url, :contact, :phone, :url, :email, :display]
       permit.push(nor_pdfs: [])    if permit_nor_pdfs
       permit.push(result_pdfs: []) if permit_result_pdfs
 
