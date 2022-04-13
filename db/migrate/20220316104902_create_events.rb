@@ -3,6 +3,7 @@ class CreateEvents < ActiveRecord::Migration[7.0]
     create_table :events do |t|
       t.date    :start_date # 大会 開始日
       t.date    :end_date   # 大会 終了日
+      t.string  :schedule_adjustment # 日程調整中の際に用いる
 
       t.string  :category   # 予選大会、愛知の大会、両方 の区分
 
