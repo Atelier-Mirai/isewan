@@ -1,5 +1,7 @@
 module ApplicationHelper
   def pretty_date(date, wday: false)
+    return "" if date.blank?
+
     case wday
     when false
       month = sprintf("%02d", date.month)

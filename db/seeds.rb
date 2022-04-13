@@ -27,38 +27,73 @@ Notice.create([
 ])
 
 Event.create([
-  { start_date: "2019-06-09", end_date: nil, category: "preliminary",
-    name: "逗子市長杯", place: "神奈川県逗子市逗子海岸", nor_url: nil, result_url: nil,
-    contact: "オフィスアビーム", phone: "046-874-9878", url: "http://event.jw-a.org/event-info/第27回逗子市長杯ウインドサーフィンレース/", email: "info@officeabeam.co.jp",
-    display: false  },
-  { start_date: "2021-05-30", end_date: nil, category: "preliminary",
-    name: "Himeno cup 2021 the 24th", place: "神奈川県逗子市逗子海岸", nor_url: "http://www.kayawind.com/race/2021/himenocup2021.pdf", result_url: nil,
+  { start_date: nil, end_date: nil, category: "preliminary",
+    name: "逗子市長杯(未定)", place: "神奈川県逗子市逗子海岸", nor_url: nil, result_url: nil,
+    contact: "オフィスアビーム", phone: "046-874-9878", url: "https://www.officeabeam.co.jp/", email: "info@officeabeam.co.jp",
+    display: true  },
+
+  { start_date: "2022-05-15", end_date: nil, category: "preliminary",
+    name: "Himeno Cup 2022 the 25th", place: "神奈川県逗子市逗子海岸", nor_url: "https://jw-a.org/wp-content/uploads/2022/04/2022himenocup-kouji.pdf", result_url: nil,
     contact: "KAYA", phone: "046-872-1883", url: "http://www.kayawind.com/race/2021/himenocup2021.pdf", email: "kayawind@kamakuranet.ne.jp",
-    display: false  },
-  { start_date: "2021-06-26", end_date: nil, category: "preliminary",
-    name: "35th MID CUP", place: "静岡県浜名湖 大崎海岸 ビーチスマリーナ沖", nor_url: "https://jw-a.org/wp-content/uploads/2021/05/2021midcup-kouji3.pdf", result_url: nil,
-    contact: "JWAコースレース委員会", phone: nil, url: "https://jw-a.org/wp-content/uploads/2021/05/2021midcup-kouji3.pdf", email: nil,
-    display: false  },
+    display: true  },
+
+  { start_date: "2022-06-11", end_date: "2022-06-12", category: "preliminary",
+    name: "第44回 WSF湘南選手権", place: "神奈川県鎌倉市材木座", nor_url: "https://jw-a.org/wp-content/uploads/2022/04/2022himenocup-kouji.pdf", result_url: nil,
+    contact: "KAYA", phone: "046-872-1883", url: "http://www.kayawind.com/race/2021/himenocup2021.pdf", email: "kayawind@kamakuranet.ne.jp",
+    display: true  },
+
+  { start_date: "2022-05-28", end_date: "2022-05-29", category: "preliminary",
+    name: "琵琶湖マリンカップ", place: "滋賀県近江八幡市", nor_url: nil, result_url: nil,
+    contact: "セブンシーズ", phone: "0467-22-5050", url: "http://www.7seas.jp/", email: nil, display: true  },
+
+  { start_date: "2021-06-19", end_date: nil, category: "preliminary",
+    name: "36th MID CUP 2022", place: "静岡県浜名湖 大崎海岸 ビーチスマリーナ沖", nor_url: nil,  result_url: nil,
+    contact: nil, phone: nil, url: nil, email: nil, display: false  },
+
+
   { start_date: "2022-07-02", end_date: "2022-07-03", category: "both",
     name: "テクノクラス、国体WS級中部選手権大会", place: "愛知県知多市新舞子", nor_url: nil, result_url: nil,
     contact: "大会事務局", phone: "090-1476-2206", url: "https://isewan.herokuapp.com", email: "ayf-wind@sd5.so-net.ne.jp",
     display: true  },
+
   { start_date: "2022-07-10", end_date: nil, category: "both",
     name: "伊勢湾カップ新舞子セレクションレース テクノ、テクノプラス、国体WS級", place: "愛知県知多市新舞子", nor_url: nil, result_url: nil,
     contact: "大会事務局", phone: "090-1476-2206", url: "https://isewan.herokuapp.com", email: "ayf-wind@sd5.so-net.ne.jp",
     display: true  },
-  { start_date: "2021-07-03", end_date: "2021-07-04", category: "preliminary",
+
+  { start_date: nil, end_date: nil, category: "preliminary",
+    name: "四国選手権大会", place: nil, nor_url: nil, result_url: nil,
+    contact: nil, phone: nil, url: nil, email: nil, display: true },
+
+  { start_date: nil, end_date: nil, category: "preliminary",
     name: "九州選手権大会", place: "大分県杵築市住吉浜リゾート", nor_url: nil, result_url: nil,
-    contact: "BUZZ", phone: "0978-63-8774", url: nil, email: nil,
-    display: false  },
+    contact: "マリンショップ BUZZ", phone: "0978-63-8774", url: "https://marineshop-buzz.com/", email: nil, display: true },
+
   { start_date: "2022-07-09", end_date: nil, category: "regional",
     name: "国体 愛知県予選", place: "愛知県知多市新舞子", nor_url: nil, result_url: nil,
     contact: "大会事務局", phone: "090-1476-2206", url: "https://isewan.herokuapp.com", email: "ayf-wind@sd5.so-net.ne.jp",
     display: true  },
+
   { start_date: "2022-08-21", end_date: nil, category: "regional",
     name: "名古屋港ボート天国 ナゴヤチャレンジカップ", place: "名古屋港ヨットトレーニングセンター", nor_url: nil, result_url: nil,
     contact: "大会事務局", phone: "090-1476-2206", url: "https://isewan.herokuapp.com", email: "ayf-wind@sd5.so-net.ne.jp",
-    display: true  }
+    display: true  },
+
+  { start_date: nil, end_date: nil, category: "preliminary",
+    name: "OHKカップ イン かがわ２０１９featuuring海岸寺", place: "香川県仲多度郡多度津町海岸寺(同沖合)", nor_url: nil, result_url: nil,
+    contact: "香川潜水", phone: "0877-45-2511", url: "http://www.kagawasensui.com/wind/sensui.html", email: nil, display: false },
+
+  { start_date: nil, end_date: nil, category: "preliminary",
+    name: "青島GO GO CUP", place: "宮崎市青島海水浴場", nor_url: nil, result_url: nil,
+    contact: "タコス サーフトイズ", phone: "0985-58-1014", url: "http://park21.wakwak.com/~eyp/tacos/", email: nil, display: false },
+
+  { start_date: nil, end_date: nil, category: "preliminary",
+    name: "シーガルカップ", place: "福岡県福間海岸", nor_url: nil, result_url: nil,
+    contact: "シーガルイン", phone: "0940-43-2661", url: "http://seagull-inn.com/2019/03/05/seagullcup-2/", email: nil, display: false },
+
+  { start_date: nil, end_date: nil, category: "preliminary",
+    name: "伊勢湾沖縄セレクション", place: nil, nor_url: nil, result_url: nil,
+    contact: "ポポロポイント", phone: "098-983-0000", url: "http://ww61.tiki.ne.jp/~popolo", email: nil, display: false },
 ])
 
 Link.create(url: "https://photos.app.goo.gl/cK6MRBDCAZbTq6jp8", text: "2019年大会開会式/一日目/二日目")
