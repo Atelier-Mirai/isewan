@@ -46,7 +46,7 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
-    active_storage_validations (0.9.7)
+    active_storage_validations (0.9.8)
       activejob (>= 5.2.0)
       activemodel (>= 5.2.0)
       activestorage (>= 5.2.0)
@@ -118,7 +118,7 @@ GEM
     faraday (2.2.0)
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
-    faraday-net_http (2.0.1)
+    faraday-net_http (2.0.2)
     ffi (1.15.5)
     fomantic-ui-sass (2.8.8)
       autoprefixer-rails
@@ -164,7 +164,7 @@ GEM
     mini_magick (4.11.0)
     mini_mime (1.1.2)
     minitest (5.15.0)
-    msgpack (1.5.0)
+    msgpack (1.5.1)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     net-imap (0.2.3)
@@ -183,9 +183,7 @@ GEM
       timeout
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.3-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.13.3-x86_64-linux)
+    nokogiri (1.13.4-x86_64-darwin)
       racc (~> 1.4)
     oauth (0.5.8)
     oauth2 (1.4.9)
@@ -200,7 +198,7 @@ GEM
       activesupport (>= 7.0.0)
       rack
       railties (>= 7.0.0)
-    public_suffix (4.0.6)
+    public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -237,7 +235,7 @@ GEM
       zeitwerk (~> 2.5)
     rake (13.0.6)
     redcarpet (3.5.1)
-    regexp_parser (2.2.1)
+    regexp_parser (2.3.0)
     reline (0.3.1)
       io-console (~> 0.5)
     rest-client (2.1.0)
@@ -314,30 +312,29 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
-  x86_64-linux
 
 DEPENDENCIES
   active_storage_validations
   activestorage-cloudinary-service
-  bcrypt (~> 3.1.7)
+  bcrypt
   better_errors
   binding_of_caller
   bootsnap
   capybara
   cloudinary
-  dartsass-rails (~> 0.3.0)
+  dartsass-rails
   debug
   fomantic-ui-sass
   hirb
   hirb-unicode
-  image_processing (~> 1.2)
+  image_processing
   importmap-rails
   jbuilder
-  pg (~> 1.1)
+  pg
   propshaft
-  puma (~> 5.0)
+  puma
   rack-mini-profiler
-  rails (~> 7.0.2, >= 7.0.2.2)
+  rails
   redcarpet
   selenium-webdriver
   slim-rails
@@ -348,7 +345,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.1p18
+   ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.10
+   2.3.11
