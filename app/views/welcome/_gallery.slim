@@ -15,7 +15,7 @@
   -(1..29).each do |number|
     - n = sprintf("%02d", number)
     = link_to asset_path("#{n}.webp"), data: { group: "photo", modaal_desc: titles[number]}, class: "photo"
-      = image_tag "#{n}_s.webp"
+      = image_tag "#{n}_s.webp", size: "320x240", alt: titles[number], loading: "lazy"
       p.center.aligned.text
         = titles[number]
 
@@ -33,7 +33,7 @@ h2.ui.header.mt-3
 .ui.blue.segment.gallery
   - %w(2019 2018 2017day1 2017day2 2016 2015).each_with_index do |movie, index|
     = link_to links[index], data: { group: "movie" }, class: "movie"
-      = image_tag "#{movie}_s.webp"
+      = image_tag "#{movie}_s.webp", size: "320x240", alt: titles[index], loading: "lazy"
       p.center.aligned.text
         = titles[index]
 

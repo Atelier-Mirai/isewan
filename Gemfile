@@ -46,6 +46,7 @@ gem 'cloudinary', require: true
 gem 'activestorage-cloudinary-service'
 gem 'active_storage_validations'
 
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -59,7 +60,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  gem "rack-mini-profiler"
+  # gem "rack-mini-profiler"
   # エラー画面を見やすく
   gem "better_errors"
   # ブラウザ上でirbを使う
@@ -71,4 +72,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+end
+
+group :project do
+  # gzip 配信
+  gem 'heroku-deflater'
 end

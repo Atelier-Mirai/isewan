@@ -1,8 +1,8 @@
 doctype html
-html
+html lang="ja"
   head
     title
-      | 伊勢湾カップ
+      | 伊勢湾カップ【公式】
     meta name="viewport" content="width=device-width"
     = csrf_meta_tags
     = csp_meta_tag
@@ -14,7 +14,7 @@ html
                   sizes: '180x180',
                   type:  'image/png'
 
-    meta content="伊勢湾カップとは、昭和58年より開催、今年で39回目を迎える国内有数のウィンドサーフィンの祭典です。毎年夏に愛知県知多市新舞子海岸沖で行われます。" name="description"
+    meta content="伊勢湾カップの公式サイトです。昭和58年より開催、今年で39回目を迎える国内有数のウィンドサーフィンの祭典です。毎年夏に愛知県知多市新舞子海岸沖で行われます。" name="description"
 
     / Google Fonts
     link rel="preconnect" href="https://fonts.googleapis.com"
@@ -25,7 +25,7 @@ html
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.css"
 
     / fontawesome
-    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 
     / ハンバーガーメニュー
     = stylesheet_link_tag "hamburgers", "data-turbo-track": "reload"
@@ -45,6 +45,7 @@ html
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.css"
     = stylesheet_link_tag "vegas_custom", "data-turbo-track": "reload"
     script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.js"
+
     = javascript_include_tag "vegas_custom", "data-turbo-track": "reload"
     = javascript_include_tag "glow_text", "data-turbo-track": "reload"
 
@@ -55,6 +56,8 @@ html
     / Smooth Scroll ページ内リンクをクリックすると滑らかにスクロールする
     script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"
 
+    / Google Search Console
+    meta name="google-site-verification" content="ipxSlA_IQQ6OZLh4kCdCfm6zeShXxG61pgFGRyjDFn8"
   body
     = render "layouts/header"
     .ui.container
