@@ -1,0 +1,2 @@
+module ServiceworkerHelper
+end

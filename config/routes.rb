@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root "welcome#index"
 
+  # PWA
+  # https://qiita.com/pham_thanh_thuong/items/f5a043f1730c3bf4bfe7
+  resources :manifest, only: %i[index]
+  resources :serviceworker, only: %i[index]
+
   # STI
   resources :articles, only: %i[index new create update destroy]
   resources :landings, controller: :articles, type: :landing, only: %i[index new create update destroy]

@@ -58,6 +58,13 @@ html lang="ja"
 
     / Google Search Console
     meta name="google-site-verification" content="ipxSlA_IQQ6OZLh4kCdCfm6zeShXxG61pgFGRyjDFn8"
+
+    / PWA
+    / link rel="manifest" href="/manifest.json&nocache=<%= (0...50).map { ('a'..'z').to_a[rand(26)] }.join %>"
+    link rel="manifest" href="/manifest.json"
+    meta name="theme-color" content="#fef4f4"
+    meta name="apple-mobile-web-app-capable" content="yes"
+
   body
     = render "layouts/header"
     .ui.container
@@ -84,6 +91,15 @@ html lang="ja"
 
     // チェックボックス・ラジオボタン
     // $(".ui.checkbox").checkbox();
+
+
+    // PWA
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register('/serviceworker.js', { scope: './' })
+        .then(function(reg) {
+          console.log('[Companion]', 'Service worker registered!');
+        });
+    }
 
   - if Rails.env.development?
     .ui.container style="margin-top: 5rem;"
