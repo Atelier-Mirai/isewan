@@ -44,7 +44,7 @@ module ApplicationHelper
   end
 
   def competitions_date(start_date, end_date, schedule_adjustment)
-    return schedule_adjustment if schedule_adjustment
+    return schedule_adjustment if schedule_adjustment.present?
 
     s = pretty_date(start_date, wday: true)
     s << "〜#{pretty_date(end_date, wday: true)}" if end_date
