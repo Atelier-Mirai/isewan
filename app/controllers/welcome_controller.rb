@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
 
     @seeded_player = seeded_player
 
-    @links = Link.all
+    @links = Link.all.order(id: :desc)
   end
 
 

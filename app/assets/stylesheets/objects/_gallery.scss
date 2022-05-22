@@ -1,7 +1,27 @@
 .gallery {
   display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
   grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
   gap: 10px;
+
+  h3 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-top: 0;
+  }
+
+  p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p.right.aligned.text {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin-top: 0;
+  }
 
   img {
     max-width: 100%;
