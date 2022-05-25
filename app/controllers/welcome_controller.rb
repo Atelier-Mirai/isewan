@@ -10,6 +10,7 @@ class WelcomeController < ApplicationController
 
     @seeded_player = seeded_player
 
+    @winners = Winner.all
     @links = Link.all.order(id: :desc)
   end
 

@@ -30,6 +30,15 @@
   }
 }
 
+.large.gallery {
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  gap: 10px;
+
+  img {
+    width: 100%;
+  }
+}
+
 .movies {
   .modaal-inner-wrapper {
     padding: 0 !important;

@@ -1,0 +1,139 @@
+#award.pt-68
+.ui.aligned.grid
+  .left.floated.left.aligned.six.wide.column
+    .ui
+      h2.ui.h2.header
+        | 歴代優勝者
+      p
+        | 第一回大会からの栄光ある歴代優勝者の方々です。
+
+table.ui.blue.table.mb-0
+
+  thead
+    tr.center.aligned
+      th 回
+      th 伊勢湾DIV
+      th テクノDIV
+  tbody
+
+  - @winners.each do |winner|
+    tr.top.aligned
+      td.center.aligned
+        = winner.times
+      td.center.aligned
+        = winner.isewan
+      td.center.aligned
+        = winner.tech
+
+#award.pt-68
+.ui.aligned.grid
+  .left.floated.left.aligned.six.wide.column
+    .ui
+      h2.ui.h2.header
+        | 栄光ある表彰式
+
+.ui.blue.segment.large.gallery
+  h3
+    | 第34回 伊勢湾カップ2016
+
+  - titles = { beer: "喜びの麦酒かけ", ledies: "女子優勝者", tech_beer: "喜びの麦酒かけ", tech_ledies: "テクノ女子優勝者", tech: "テクノ優勝者", winners: "総合優勝者" }
+  - %i(winners beer tech tech_ledies tech_beer ledies).each do |n|
+    = link_to asset_path("isewan34/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
+      = image_tag "isewan34/#{n}_s.webp", size: "320x240", alt: titles[n], loading: "lazy"
+      p.center.aligned.text
+        = titles[n]
+
+.ui.blue.segment.large.gallery
+  h3
+    | 第35回 伊勢湾カップ2017
+
+  - titles = { beer: "喜びの麦酒かけ", ledies: "女子優勝者", masters: "マスターズ優勝者", tech_ledies: "テクノ女子優勝者", tech: "テクノ優勝者", tech2: "テクノ優勝者", tech3: "テクノ優勝者", winners: "総合優勝者", winners2: "総合優勝者" }
+  - %i(winners winners2 beer masters tech tech2 tech3 tech_ledies ledies).each do |n|
+    = link_to asset_path("isewan35/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
+      = image_tag "isewan35/#{n}_s.webp", size: "320x240", alt: titles[n], loading: "lazy"
+      p.center.aligned.text
+        = titles[n]
+
+.ui.blue.segment.large.gallery
+  h3
+    | 第36回 伊勢湾カップ2018
+
+  - titles = { beer: "喜びの麦酒かけ", ledies: "女子優勝者", masters: "マスターズ優勝者", tech_ledies: "テクノ女子優勝者", tech: "テクノ優勝者", tech2: "テクノ優勝者", tech3: "テクノ優勝者", winners: "総合優勝者", winners2: "総合優勝者" }
+  - %i(winners beer tech tech2 tech_ledies ledies).each do |n|
+    = link_to asset_path("isewan36/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
+      = image_tag "isewan36/#{n}_s.webp", size: "320x240", alt: titles[n], loading: "lazy"
+      p.center.aligned.text
+        = titles[n]
+
+.ui.blue.segment.large.gallery
+  h3
+    | 第37回 伊勢湾カップ2019
+
+  - titles = { beer: "喜びの麦酒かけ", ledies: "女子優勝者", masters: "マスターズ優勝者", tech_ledies: "テクノ女子優勝者", tech: "テクノ優勝者", tech2: "テクノ優勝者", tech3: "テクノ優勝者", winners: "総合優勝者", winners2: "総合優勝者", group_photo: "集合写真" }
+  - %i(winners tech beer tech_ledies ledies group_photo).each do |n|
+    = link_to asset_path("isewan37/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
+      = image_tag "isewan37/#{n}_s.webp", size: "320x240", alt: titles[n], loading: "lazy"
+      p.center.aligned.text
+        = titles[n]
+
+
+
+
+/ .ui.blue.segment.gallery
+/   h3
+/     | 第38回 伊勢湾カップ2021
+/   p
+/     | 　伊勢湾カップ2021はコロナ禍のなか皆さんのご協力で行われましたが、大会終了直後は、まだまだ感染者も多く、写真を掲載した場合、海の上ではマスクなどしていないため、いろいろな意見が出ると思い、掲載を控えておりました。
+/     br
+/     | 　幸いここへきて、屋外では、マスクの着用は…という風潮になってきましたので、昨年の大会で、全くクラスターなども発生していませんでしたが、遅ればせながら、表彰式の写真とともに掲載します。
+/     br
+/     | 　遅くなりましたことをお詫びするとともに、本年は従来のように、出艇申告や帰着申告など、リモートではない方法で行えるように準備致しています。昨年は皆さんに多大なご苦労とご面倒をおかけしたことをお詫びいたします。
+/     br
+/     | 　本年は3年前のような夕日を浴びての表彰式などができることを祈っています。
+/   p.right.aligned.text
+/     | 伊勢湾カップ 大会委員長 金光秀吉
+/
+/   -[2, 3, 6, 9, 10, 15, 16, 23, 27, 31, 32, 34, 35, 36, 37, 44, 58,
+/     61, 64, 67, 68, 71, 73, 74, 76, 77, 80, 83, 86, 87].each do |number|
+/     - n = sprintf("%02d", number)
+/     - desc = (number <= 60 ? "競技風景" : "表彰式")
+/     = link_to asset_path("isewan38/#{n}.webp"), data: { group: "photo", modaal_desc: desc }, class: "photo"
+/       = image_tag "isewan38/#{n}_s.webp", size: "320x213", alt: titles[number], loading: "lazy"
+/       p.center.aligned.text
+/         = desc
+/
+/ .ui.blue.segment
+/   p
+/     | その他の写真はこちら
+/   - @links.each do |link|
+/     = decorated_url(link.url, link.text)
+/
+/ h2.ui.header.mt-3
+/   | 動画
+/
+/   - links = %w(https://player.vimeo.com/video/354152854 https://player.vimeo.com/video/289058532 https://player.vimeo.com/video/228689575 https://www.youtube.com/embed/e-djU8JIetg https://player.vimeo.com/video/179582374 https://www.youtube.com/embed/wKy-RSIdEWw)
+/   - titles = %w(2019年大会 2018年大会 2017年大会一日目 2017年大会二日目 2016年大会 2015年大会)
+/ .ui.blue.segment.gallery
+/   - %w(2019 2018 2017day1 2017day2 2016 2015).each_with_index do |movie, index|
+/     = link_to links[index], data: { group: "movie" }, class: "movie"
+/       = image_tag "#{movie}_s.webp", size: "320x240", alt: titles[index], loading: "lazy"
+/       p.center.aligned.text
+/         = titles[index]
+/
+/ css:
+/   .modaal-wrapper.modaal-video  .modaal-inner-wrapper {
+/     padding: 0 !important;
+/   }
+/   .modaal-wrapper.modaal-video .modaal-video-wrap {
+/     margin: 10px !important;
+/   }
+/
+/ javascript:
+/   $('.photo').modaal({
+/     type: 'image'
+/   });
+/   $('.movie').modaal({
+/     type: 'video',
+/     width: 700,
+/ 	  height: 500
+/   });
