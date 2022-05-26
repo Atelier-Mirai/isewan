@@ -24,6 +24,9 @@ table.ui.blue.table.mb-0
         = winner.isewan
       td.center.aligned
         = winner.tech
+p.right.aligned.text
+  small
+    | (敬称略)
 
 #award.pt-68
 .ui.aligned.grid
@@ -32,7 +35,7 @@ table.ui.blue.table.mb-0
       h2.ui.h2.header
         | 栄光ある表彰式
 
-- titles = { beer: "喜びの麦酒かけ", cheers: "祝杯", ledies: "女子優勝者", masters: "マスターズ優勝者", tech_ledies: "テクノ女子優勝者", tech: "テクノ優勝者", tech2: "テクノ優勝者", tech3: "テクノ優勝者", winners: "総合優勝者", winners2: "総合優勝者", group_photo: "集合写真" }
+- titles = { beer: "喜びの麦酒かけ", beer2: "喜びの麦酒かけ", cheers: "祝杯", ledies: "女子優勝者", masters: "マスターズ優勝者", tech_ledies: "テクノ女子優勝者", tech: "テクノ優勝者", tech2: "テクノ優勝者", tech3: "テクノ優勝者", winners: "総合優勝者", winners2: "総合優勝者", group_photo: "集合写真" }
 
 .ui.blue.segment.large.gallery
   h3
@@ -47,7 +50,7 @@ table.ui.blue.table.mb-0
   h3
     | 第34回 伊勢湾カップ2016
 
-  - %i(winners beer tech tech_ledies tech_beer ledies).each do |n|
+  - %i(winners beer tech tech_ledies beer2 ledies).each do |n|
     = link_to asset_path("isewan34/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
       = image_tag "isewan34/#{n}_s.webp", size: "320x240", alt: titles[n], loading: "lazy"
       p.center.aligned.text
