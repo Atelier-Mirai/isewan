@@ -14,7 +14,8 @@
     | 第33回 伊勢湾カップ2015
   - %i(winners beer tech tech_ledies masters ledies cheers group_photo).each do |n|
     = link_to asset_path("isewan33/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
-      = image_tag "isewan33/#{n}_s.webp", size: "480x320", alt: titles[n], loading: "lazy"
+      .frame
+        = image_tag "isewan33/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
       p.center.aligned.text
         = titles[n]
 
@@ -24,7 +25,8 @@
 
   - %i(winners beer tech tech_ledies beer2 ledies).each do |n|
     = link_to asset_path("isewan34/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
-      = image_tag "isewan34/#{n}_s.webp", size: "320x240", alt: titles[n], loading: "lazy"
+      .frame
+        = image_tag "isewan34/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
       p.center.aligned.text
         = titles[n]
 
@@ -34,7 +36,8 @@
 
   - %i(winners winners2 beer masters tech tech2 tech3 tech_ledies ledies).each do |n|
     = link_to asset_path("isewan35/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
-      = image_tag "isewan35/#{n}_s.webp", size: "320x240", alt: titles[n], loading: "lazy"
+      .frame
+        = image_tag "isewan35/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
       p.center.aligned.text
         = titles[n]
 
@@ -44,7 +47,8 @@
 
   - %i(winners beer tech tech2 tech_ledies ledies).each do |n|
     = link_to asset_path("isewan36/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
-      = image_tag "isewan36/#{n}_s.webp", size: "320x240", alt: titles[n], loading: "lazy"
+      .frame
+        = image_tag "isewan36/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
       p.center.aligned.text
         = titles[n]
 
@@ -55,12 +59,12 @@
   - %i(winners tech beer tech_ledies ledies group_photo).each do |n|
       = link_to asset_path("isewan37/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
         .frame
-          = image_tag "isewan37/#{n}_s.webp", size: "320x240", alt: titles[n], loading: "lazy"
+          = image_tag "isewan37/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
         p.center.aligned.text
           = titles[n]
 
 
-.ui.aligned.grid
+.ui.aligned.grid.pt-68
   .left.floated.left.aligned.six.wide.column
     .ui
       h2.ui.h2.header
