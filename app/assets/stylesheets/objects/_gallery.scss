@@ -1,3 +1,5 @@
+@use "utilities/iro" as *;
+
 .gallery {
   display: grid;
   // grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
@@ -33,9 +35,30 @@
 .large.gallery {
   grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
   gap: 10px;
+  background-image: url("gold3.jpg") !important;
+  filter: brightness(110%);
+
+  h3 {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .frame {
+    border: 8px solid lighten($sakurairo, 20%);
+    // border-image: linear-gradient(to right, #c21500 0%, #ffc500 100%);
+    // border-image: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+    // border-image-slice: 1;
+    box-shadow: 0 0 0 1px #ccc, 1px 3px 8px 0 #25252555;
+  }
+
+  a {
+    color: $kurohairo;
+    text-shadow: 1px 1px 2px $kurohairo;
+  }
 
   img {
     width: 100%;
+    filter: blur(0px) brightness(110%) contrast(100%) saturate(100%);
   }
 }
 
@@ -45,5 +68,22 @@
     .modaal-video-wrap {
       margin: 10px !important;
     }
+  }
+}
+
+.winners {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(128px,1fr));
+  gap: 15px;
+
+  background-image: url("gold3.jpg") !important;
+
+  h3 {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  p {
+    text-shadow: 1px 1px 2px $kurohairo;
   }
 }
