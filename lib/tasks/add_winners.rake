@@ -41,6 +41,7 @@ task :add_winners => :environment do
   36 山崎大輔 深尾圭貴
   37 尾川　潤 森平裕也
   38 尾川　潤 関　港大
+  39 小嶺　恵美 倉鹿野　巧
   WINNERS
 
   winners.each_line(chomp: true) do |w|

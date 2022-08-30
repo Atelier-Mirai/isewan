@@ -17,9 +17,9 @@ header.header.ui.small.top.fixed.menu.scroll_header_menu.computer.only.bg-sakura
       = link_to '#gallery', class: 'item' do
         i.fa-solid.fa-photo-film.fa-lg.fa-fw
         | 写真・動画
-      = link_to '#preliminary', class: 'item' do
-        i.fa-solid.fa-calendar-days.fa-lg.fa-fw
-        | 予選大会
+      / = link_to '#preliminary', class: 'item' do
+      /   i.fa-solid.fa-calendar-days.fa-lg.fa-fw
+      /   | 予選大会
       - if logged_in?
         = link_to logout_path, method: :delete do
           .ui.small.red.button
@@ -78,14 +78,14 @@ header.header.scroll_header_menu.mobile.only
           = link_to '#gallery', class: 'item' do
             i.fa-solid.fa-photo-film.fa-lg.fa-fw
             | 写真・動画
-        li
-          = link_to '#preliminary', class: 'item' do
-            i.fa-solid.fa-calendar-days.fa-lg.fa-fw
-            | 予選大会
-        li
-          = link_to '#regional', class: 'item' do
-            i.fa-regular.fa-calendar.fa-lg.fa-fw
-            | 愛知の大会
+        / li
+        /   = link_to '#preliminary', class: 'item' do
+        /     i.fa-solid.fa-calendar-days.fa-lg.fa-fw
+        /     | 予選大会
+        / li
+        /   = link_to '#regional', class: 'item' do
+        /     i.fa-regular.fa-calendar.fa-lg.fa-fw
+        /     | 愛知の大会
 
 javascript:
   document.querySelector('.navbtn.hamburger').addEventListener('click', () => {

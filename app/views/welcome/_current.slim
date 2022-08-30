@@ -1,0 +1,83 @@
+#current.pt-68
+.ui.aligned.grid
+  .left.floated.left.aligned.six.wide.column
+    .ui
+      h2.ui.h2.header
+        | 第39回 伊勢湾カップ2022
+
+.ui.blue.segment.large.gallery
+  h3.large.text.mt-2.mb-2
+    | 開会式・表彰式
+  p.lead.text
+    | 知多市長や県会議員を始めとする
+    br.mobile.only
+    | 来賓の方々のご臨席を賜りました
+
+  - t = {  t03: "バックボードには伝統の大カップ",
+           # t05: "大会会長 金光 秀吉による挨拶",
+           t06: "知多市観光協会 副会長 竹内 徳得 様",
+           t07: "知多市環境経済部長 林 様",
+           t47: "知多市長杯の授与",
+           t49: "伊勢湾DIV上位入賞の選手",
+           t53: "女子の総合優勝は初めて",
+           t54: "伊勢湾DIV女子表彰",
+           t60: "テクノDIV総合表彰",
+           t68: "テクノDIV女子表彰",
+           t64: "喜びの麦酒かけ",
+           t69: "U-17 一位",
+           t70: "U-15 一位",
+           t71: "大会名誉会長 知多市長 宮島壽男 様",
+           t73: "愛知県議会議員 佐藤一志 様",
+           t74: "知多市観光協会 副会長 竹内徳得 様",
+           t76: "大会会長 金光秀吉",
+           t79: "集合写真",
+        }
+
+  - (1..81).each do |number|
+    - n = sprintf("%02d", number)
+    - next if t["t#{n}".to_sym].blank?
+
+    = link_to asset_path("isewan39/#{n}.webp"), data: { group: "photo", modaal_desc: t["t#{n}".to_sym]}, class: "photo"
+      .frame
+        = image_tag "isewan39/#{n}.webp", size: "320x240", alt: t["t#{n}".to_sym], loading: "lazy"
+      p.center.aligned.text
+        = t["t#{n}".to_sym] || "#{n}.webp"
+
+.ui.blue.segment.gallery
+  h3
+    | 競技風景
+
+    - t = {  t01: "臨時駐車場の整備",
+             t04: "レースに備える選手",
+             t11: "競技風景",
+             t12: "競技風景",
+             t16: "多くの選手が競い合う",
+             t18: "競技風景",
+             t20: "総合優勝の小嶺選手",
+             t21: "競技風景",
+             t25: "競技風景",
+             t27: "170名を超えるスタート風景",
+             t29: "スタート直後のデッドヒート",
+             t30: "競技風景",
+             t33: "競技風景",
+             t35: "テクノ優勝 倉鹿野選手",
+             t36: "競技風景",
+             t40: "競技風景",
+             t41: "競技風景",
+             t43: "道具を片付け ビーチクリーン",
+          }
+  / p
+  /   | 知多市長や県会議員を始めとする来賓の方々をお招きして行われた表彰式の風景です。
+  / - [1, 21, 22, 23, 24, 25, 26, 27, 28, 29].each do |number|
+  - (1..81).each do |number|
+    - n = sprintf("%02d", number)
+    - next if t["t#{n}".to_sym].blank?
+
+    = link_to asset_path("isewan39/#{n}.webp"), data: { group: "photo", modaal_desc: t["t#{n}".to_sym]}, class: "photo"
+      = image_tag "isewan39/#{n}.webp", size: "320x240", alt: t["t#{n}".to_sym], loading: "lazy"
+      p.center.aligned.text
+        = t["t#{n}".to_sym] || "#{n}.webp"
+
+p.right.aligned.text
+  | その他の写真は&nbsp;
+  => link_to "こちら","https://photos.app.goo.gl/Rmwt5SEYhwkm5YYA6"

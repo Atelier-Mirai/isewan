@@ -5,41 +5,40 @@
       h2.ui.h2.header
         | 栄光ある表彰式
 
+- titles = { beer: "喜びの麦酒かけ", beer2: "喜びの麦酒かけ", cheers: "祝杯", ledies: "女子優勝者", masters: "マスターズ優勝者", tech_ledies: "テクノ女子優勝者", tech: "テクノ優勝者", tech2: "テクノ優勝者", tech3: "テクノ優勝者", winners: "総合優勝者", winners2: "総合優勝者", group_photo: "集合写真" }
+
+- titles2 = { b001: "杯と楯", b003: "知多市長より賞状授与", b006: "知多市長より杯授与", b007: "優勝者達", b030: "県会議員より賞状授与", b031: "県会議員より賞状授与", b032: "県会議員より楯授与", b047: "優勝者", b052: "知多市長挨拶", b055: "県会議員挨拶", b060: "来賓の方々", b061: "大会実行委員長挨拶" }
+
 .ui.blue.segment.large.gallery
-  h3
+  h3.large.text.mt-2.mb-2
+    | 第37回 伊勢湾カップ2019
+  p.lead.text
     | 知多市長や県会議員を始めとする
     br.mobile.only
     | 来賓の方々をお迎えしての表彰式
 
-  - titles = { b001: "杯と楯", b003: "知多市長より賞状授与", b006: "知多市長より杯授与", b007: "優勝者達", b030: "県会議員より賞状授与", b031: "県会議員より賞状授与", b032: "県会議員より楯授与", b047: "優勝者", b052: "知多市長挨拶", b055: "県会議員挨拶", b060: "来賓の方々", b061: "大会実行委員長挨拶" }
-
   - %i(b001 b003 b006 b007 b030 b031 b032 b047 b052 b055 b060 b061).each do |n|
-    = link_to asset_path("ceremony/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
+    = link_to asset_path("ceremony/#{n}.webp"), data: { group: "photo", modaal_desc: titles2[n] }, class: "photo"
       .frame
-        = image_tag "ceremony/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
+        = image_tag "ceremony/#{n}_s.webp", size: "640x480", alt: titles2[n], loading: "lazy"
       p.center.aligned.text
-        = titles[n]
+        = titles2[n]
 
-- titles = { beer: "喜びの麦酒かけ", beer2: "喜びの麦酒かけ", cheers: "祝杯", ledies: "女子優勝者", masters: "マスターズ優勝者", tech_ledies: "テクノ女子優勝者", tech: "テクノ優勝者", tech2: "テクノ優勝者", tech3: "テクノ優勝者", winners: "総合優勝者", winners2: "総合優勝者", group_photo: "集合写真" }
+  - %i(winners tech beer tech_ledies ledies group_photo).each do |n|
+      = link_to asset_path("isewan37/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
+        .frame
+          = image_tag "isewan37/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
+        p.center.aligned.text
+          = titles[n]
 
 .ui.blue.segment.large.gallery
   h3
-    | 第33回 伊勢湾カップ2015
-  - %i(winners beer tech tech_ledies masters ledies cheers group_photo).each do |n|
-    = link_to asset_path("isewan33/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
-      .frame
-        = image_tag "isewan33/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
-      p.center.aligned.text
-        = titles[n]
+    | 第36回 伊勢湾カップ2018
 
-.ui.blue.segment.large.gallery
-  h3
-    | 第34回 伊勢湾カップ2016
-
-  - %i(winners beer tech tech_ledies beer2 ledies).each do |n|
-    = link_to asset_path("isewan34/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
+  - %i(winners beer tech tech2 tech_ledies ledies).each do |n|
+    = link_to asset_path("isewan36/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
       .frame
-        = image_tag "isewan34/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
+        = image_tag "isewan36/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
       p.center.aligned.text
         = titles[n]
 
@@ -56,25 +55,25 @@
 
 .ui.blue.segment.large.gallery
   h3
-    | 第36回 伊勢湾カップ2018
+    | 第34回 伊勢湾カップ2016
 
-  - %i(winners beer tech tech2 tech_ledies ledies).each do |n|
-    = link_to asset_path("isewan36/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
+  - %i(winners beer tech tech_ledies beer2 ledies).each do |n|
+    = link_to asset_path("isewan34/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
       .frame
-        = image_tag "isewan36/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
+        = image_tag "isewan34/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
       p.center.aligned.text
         = titles[n]
 
-.ui.blue.segment.large.gallery
-  h3.large.text.mt-2.mb-2
-    | 第37回 伊勢湾カップ2019
 
-  - %i(winners tech beer tech_ledies ledies group_photo).each do |n|
-      = link_to asset_path("isewan37/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
-        .frame
-          = image_tag "isewan37/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
-        p.center.aligned.text
-          = titles[n]
+.ui.blue.segment.large.gallery
+  h3
+    | 第33回 伊勢湾カップ2015
+  - %i(winners beer tech tech_ledies masters ledies cheers group_photo).each do |n|
+    = link_to asset_path("isewan33/#{n}.webp"), data: { group: "photo", modaal_desc: titles[n] }, class: "photo"
+      .frame
+        = image_tag "isewan33/#{n}_s.webp", size: "640x480", alt: titles[n], loading: "lazy"
+      p.center.aligned.text
+        = titles[n]
 
 
 .ui.aligned.grid.pt-68

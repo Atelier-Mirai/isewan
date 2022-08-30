@@ -21,4 +21,6 @@ task :add_photos_link => :environment do
   Link.create(url: "https://photos.app.goo.gl/cK6MRBDCAZbTq6jp8", text: "2019年大会開会式/一日目/二日目")
 
   Link.create(url: "https://photos.app.goo.gl/wBY5KPXsQZyUcmM38", text: "2021年大会")
+
+  Link.create(url: "https://photos.app.goo.gl/Rmwt5SEYhwkm5YYA6", text: "2022年大会")
 end
