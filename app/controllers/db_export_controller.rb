@@ -1,7 +1,6 @@
 class DbExportController < ApplicationController
   # before_action :require_login
 
-
   def index
     # unless logged_in?
     #   redirect_back_or_to login_path
