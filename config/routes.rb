@@ -24,4 +24,7 @@ Rails.application.routes.draw do
   post   "login",  to: "sessions#create"
   delete "logout", to: "sessions#destroy", as: :logout
   get    "logout", to: "sessions#destroy"
+
+  # database export
+  get 'db_export', to: "db_export#index", as: :db_export
 end

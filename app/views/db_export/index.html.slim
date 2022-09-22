@@ -1,0 +1,17 @@
+h1 DbExport#index
+p Find me in app/views/db_export/index.html.slim
+
+- klasses = %w(Article Event Gallery Link Photo Winner)
+
+- klasses.each do |klass|
+  p = "#{klass}.destroy_all"
+
+- klasses.each do |klass|
+  -k = klass.constantize
+  - column_names = klass.constantize.column_names
+  - k.all.each do |item|
+    - data = ""
+    - column_names.each do |attr|
+      - next if attr == "id"
+      - data << "#{attr}: \"#{item.send(attr)}\", "
+    p = "#{klass}.create(#{data[0..-3]})"

@@ -1,4 +1,4 @@
-.ui.middle.aligned.center.aligned.grid
+.ui.container
   .column
     h2.ui.teal.image.header
       = image_tag "isewan_logo_2s.webp", class: "image"
@@ -9,12 +9,12 @@
       .ui.stacked.segment
         .field
           .ui.left.icon.input
-            i.fa-solid.fa-user-astronaut
+            / i.fa-solid.fa-user-astronaut
             = f.text_field :name, placeholder: "Enter your name"
 
         .field
           .ui.left.icon.input
-            i.fa-solid.fa-key
+            / i.fa-solid.fa-key
             = f.password_field :password, placeholder: "Password"
 
         .actions
@@ -27,28 +27,21 @@
     /     | Sign Up
 
 
-css:
-  .fa-solid {
-    left: 10px;
-    position: absolute;
-    text-align: left;
-    top: 50%;
-    width: 10%;
-    margin-top: -0.5em;
-    font-size: 1.5em;
-  }
-
-  body>.grid {
-    height: 50%;
-  }
-
-  .image {
-    margin-top: -100px;
+scss:
+  .ui.container {
+    margin-top: 100px;
   }
 
   .column {
     max-width: 450px;
+    margin: 0 auto;
   }
+
+  .ui.form .fields .field .ui.input input,
+  .ui.form .field .ui.input input {
+    width: 100%;
+  }
+
 
 javascript:
   $('.ui.form').form({
