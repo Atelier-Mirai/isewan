@@ -81,6 +81,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_25_155157) do
   create_table "links", force: :cascade do |t|
     t.string "url"
     t.string "text"
+    t.integer "times_held"
+    t.integer "rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

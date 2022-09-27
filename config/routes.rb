@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  # heroku から fly.io へ 301 リダイレクトする
+  # https://zenn.dev/fuji_nakahara/articles/23257b0f4b0b8e
+  constraints host: 'isewan.herokuapp.com' do
+    get '/(*path)', to: redirect { |path_params,| "https://isewan-cup.org/#{path_params[:path]}" }
+  end
+
+
+
+
   root "welcome#index"
 
   # PWA
