@@ -13,9 +13,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: clamp(32px, 12vw, 60px);
+  font-size: clamp(30px, 11vw, 48px);
   letter-spacing: 0.2em;
-  text-transform: uppercase;   /* (小文字でも)大文字に変換する */
+  text-transform: uppercase;
+  /* (小文字でも)大文字に変換する */
   width: 100%;
   line-height: 1;
 }
@@ -45,21 +46,35 @@
   margin: 0 !important;
 }
 
-/* 75, 70, 25 */
 /* 位置の調整 */
-#vegas-slider .h1 {  top: calc(80px + 7%); }
-#vegas-slider .h2 {  top: calc(80px + 7% + 80px); }
-#vegas-slider .h3 {  top: calc(80px + 7% + 80px + 55px); }
-#vegas-slider .ui.text.container { top: 67%; }
+#vegas-slider .h1 {
+  top: calc(80px + 3%);
+}
+
+#vegas-slider .h2 {
+  top: calc(80px + 3% + 105px);
+}
+
+#vegas-slider .h3 {
+  top: calc(80px + 3% + 105px + 50px);
+}
+
+#vegas-slider .ui.text.container {
+  top: 67%;
+}
 
 @media(min-width: 768px) {
-  #vegas-slider .h1 {
-    font-size: 48px;           /* 大画面で大きく成りすぎるのを防ぐ */
-  }
-
   /* 位置の調整 */
-  #vegas-slider .h1 {  top: 12%;  }
-  #vegas-slider .h2 {  top: calc(12% + 110px); }
-  #vegas-slider .h3 {  top: calc(12% + 110px + 60px); }
-  #vegas-slider .ui.text.container { top: 60%; }
+  #vegas-slider .h1 {
+    top: 12%;
+  }
+  #vegas-slider .h2 {
+    top: calc(12% + 110px);
+  }
+  #vegas-slider .h3 {
+    top: calc(12% + 110px + 60px);
+  }
+  #vegas-slider .ui.text.container {
+    top: 60%;
+  }
 }

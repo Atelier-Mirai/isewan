@@ -14,6 +14,21 @@ class WelcomeController < ApplicationController
     @links = Link.all.order(times_held: :desc, rank: :asc)
   end
 
+  def index_pre
+    @landing = '<h1 class=\"ui center aligned h1 header mb-0\">伊勢湾カップ 2022</h1>\n<p class=\"ui center aligned h2 header mb-0\">新舞子の碧い海&nbsp;<br class=\"mobile only\">集う若人&nbsp;競う技術</p>\n<p class=\"ui center aligned h3 header mb-0\">8月6日(土)～7日(日)</p>'
+
+    @about   = About.recent.first
+    @notices = Notice.recent
+
+    # @events  = Event.displayed.order(start_date: :asc)
+    @preliminarys = Event.preliminary.displayed.order(start_date: :asc)
+    @regionals    = Event.regional.displayed.order(start_date: :asc)
+
+    @seeded_player = seeded_player
+
+    @winners = Winner.all
+    @links = Link.all.order(times_held: :desc, rank: :asc)
+  end
 
   private
 
@@ -21,82 +36,85 @@ class WelcomeController < ApplicationController
 
   def seeded_player
     isewan = <<~ISEWAN
-      尾川　潤	和歌山県セーリング連盟
-      小松　大悟	本田技研工業
-      由里　亮太	パイレーツハーバー
-      山本　遼	ラナイズビーチ
-      鳥取　雅嗣	広和シッピング
-      杉本　寧々	CBサーファーズ
-      鍊石　恵子	富士フイルム
-      箭内　康平	埼玉県セーリング連盟
-      籾山　和慶	豊田自動織機
-      鈴木　砂良	愛知県ヨット連盟
-      宗方　聡子	三重県セーリング連盟
-      森野　杏子 　
-      村山　智紀	SMBC信託銀行
-      坂口　智彦 　
+    小嶺　恵美	FSエンジニアリング
+    鍊石　恵子	富士フイルム
+    杉本　寧々	CBサーファーズ
+    森野　杏子	nuts
+    池田　拓海	神奈川県セーリング連盟
+    尾川　滜	和歌山県セーリング連盟
+    福村　拓也	豊田自動織機
+    山本　遼	ラナイズビーチクラブ
+    大瀬　快ヘルマン	宮崎大学
+    箭内　康平	FAR EAST
+    市川　和典	ヤマハ
+    籾山　和慶	豊田自動織機
+    坂口　智彦	　
+    小松　大悟	本田技研工業
+    小林　直寛	オクダスタイル
     ISEWAN
 
+    wind = <<~WIND
+    作野　達雄	島根県セーリング連盟
+    大熊　伸昌	Sea_You
+    白木　伸明	琉球大学
+    WIND
+
     tech_men = <<~TECH_MEN
-      関　港大	セブンシーズ
-      三浦　圭	明治大学
-      内藤　紳之介	明治大学
-      倉鹿野　巧	神奈川大学
-      川村　航一	湘南工科大学
-      高津　一晃	ＣＢサーファーズ
-      山本　健治	京都大学
-      中島　隼人	明治大学
-      来海　崚	京都大学
-      相沢　遼	明治大学
-      岡本　大成	慶應義塾大学
-      田中　翔	明治大学
-      村岡　澪	セブンシーズ
-      井上　隆	神奈川大学
-      市島　将平	伊豆急
-      藤原　拓斗	青山学院大学
-      田中　洋治郎	立教大学
-      山根　千明	慶應義塾大学
-      羽田　健太	甲南大学
-      長井　幹太	明治大学
-      芝川　元就	関西学院大学
-      小西　陽人	Marine_Blue
-      谷口　海斗	京都大学
-      楢本　訓基	京都大学
-      伊藤　颯	立命館大学
-      児島　廉	滋賀ウィンドサーフィン部
-      坪根　遼翼	早稲田大学
-      梶山　勇人	Cross_On
-      桑原　颯一	立命館大学
-      谷上　理規	京都大学
-      重松　良惟	上智大学
-      中島　大智	早稲田大学
-      中島　理幾	ＣＲＢ
-      川村　飛翔	明治大学
-      谷岡　翔太	京都大学
+    倉鹿野　巧	神奈川大学
+    内藤　紳之介	明治大学
+    山根　千明	慶應義塾大学
+    岡本　大成	慶應義塾大学
+    小山田　柊平	セブンシーズ
+    川村　飛翔	明治大学
+    重松　良惟	上智大学
+    新開　誠也	大阪大学
+    田中　翔	明治大学
+    高津　一晃	東京建物
+    井上　隆	神奈川大学
+    髙橋　雄哉	青山学院大学
+    岡　滜一郎	立命館大学
+    今西　弘成	溆賀大学
+    藤原　海	同志社大学
+    大島　春哉	明治大学
+    中嶋　剛士	京都大学
+    三寺　将太	慶應義塾大学
+    片山　好人	溆賀大学
+    國司　景太郎	大阪大学
+    永井　稜大	関東学院大学
+    小西　陽人	Marine　Blue
+    小林　将	明治大学
+    宮下　響	京都大学
+    戸田　優人	オクダスタイル
+    多田　健人	青山学院大学
+    西谷　俊輝	大阪大学
+    楢本　訓基	京都大学
+    小林　海土	日本大学
+    齋藤　海斗	関東学院大学
     TECH_MEN
 
     tech_women = <<~TECH_WOMEN
-      大島　萌	京都大学
-      村岡　美空	セブンシーズ
-      太田　華代	横浜市立大学
-      渡邊優帆	関東学院大学
-      小野　たえ	ＣＲＢ
-      元永　花	ライナズビーチ
-      元木　千乃	慶應義塾大学
-      北原　史野	京都大学
-      酒井　七海	千葉工業大学
-      大島　朱莉	カントリーハーバー
-      米原　美穂	関西学院大学
-      谷　奈渚子	慶應義塾大学
-      柳川　真奈	上智大学
-      櫻井　玲海	日本大学
-      木幡　夢	ＣＲＢ
+    大島　朱莉	カントリーハーバー
+    木幡　夢	青山学院大学
+    元木　千乃	CBサーファーズ
+    岡　朋加	明治大学
+    里村　香奈	神戸大学
+    山下　響	ラナイズビーチクラブ
+    神尾　瑠夏	関東学院大学
+    石井　明香里	慶応義塾大学
+    水野　聖玲奈	上智大学
+    森島　多希乃	同志社大学
     TECH_WOMEN
 
     i = []
     isewan.each_line do |line|
       name, team = line.split(/\s+/)
       i << Player.new(name, team)
+    end
+
+    w = []
+    wind.each_line do |line|
+      name, team = line.split(/\s+/)
+      w << Player.new(name, team)
     end
 
     tm = []
@@ -111,6 +129,7 @@ class WelcomeController < ApplicationController
       tw << Player.new(name, team)
     end
 
-    { isewan: i, tech_men: tm, tech_wemen: tw }
+
+    { isewan: i, wind: w, tech_men: tm, tech_wemen: tw }
   end
 end

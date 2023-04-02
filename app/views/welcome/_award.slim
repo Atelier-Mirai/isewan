@@ -5,6 +5,45 @@
       h2.ui.h2.header
         | 栄光ある表彰式
 
+.ui.blue.segment.large.gallery
+  h3.large.text.mt-2.mb-2
+    | 第39回 伊勢湾カップ2022
+  p.lead.text
+    | 知多市長や県会議員を始めとする
+    br.mobile.only
+    | 来賓の方々をお迎えしての表彰式
+
+  - t = {  t03: "バックボードには伝統の大カップ",
+           # t05: "大会会長 金光 秀吉による挨拶",
+           t06: "知多市観光協会 副会長 竹内 徳得 様",
+           t07: "知多市環境経済部長 林 様",
+           t47: "知多市長杯の授与",
+           t49: "伊勢湾DIV上位入賞の選手",
+           t53: "女子の総合優勝は初めて",
+           t54: "伊勢湾DIV女子表彰",
+           t60: "テクノDIV総合表彰",
+           t68: "テクノDIV女子表彰",
+           t64: "喜びの麦酒かけ",
+           t69: "U-17 一位",
+           t70: "U-15 一位",
+           t71: "大会名誉会長 知多市長 宮島壽男 様",
+           t73: "愛知県議会議員 佐藤一志 様",
+           t74: "知多市観光協会 副会長 竹内徳得 様",
+           t76: "大会会長 金光秀吉",
+           t79: "集合写真",
+        }
+
+  - (1..81).each do |number|
+    - n = sprintf("%02d", number)
+    - next if t["t#{n}".to_sym].blank?
+
+    = link_to asset_path("isewan39/#{n}.webp"), data: { group: "photo", modaal_desc: t["t#{n}".to_sym]}, class: "photo"
+      .frame
+        = image_tag "isewan39/#{n}.webp", size: "320x240", alt: t["t#{n}".to_sym], loading: "lazy"
+      p.center.aligned.text
+        = t["t#{n}".to_sym] || "#{n}.webp"
+
+
 - titles = { beer: "喜びの麦酒かけ", beer2: "喜びの麦酒かけ", cheers: "祝杯", ledies: "女子優勝者", masters: "マスターズ優勝者", tech_ledies: "テクノ女子優勝者", tech: "テクノ優勝者", tech2: "テクノ優勝者", tech3: "テクノ優勝者", winners: "総合優勝者", winners2: "総合優勝者", group_photo: "集合写真" }
 
 - titles2 = { b001: "杯と楯", b003: "知多市長より賞状授与", b006: "知多市長より杯授与", b007: "優勝者達", b030: "県会議員より賞状授与", b031: "県会議員より賞状授与", b032: "県会議員より楯授与", b047: "優勝者", b052: "知多市長挨拶", b055: "県会議員挨拶", b060: "来賓の方々", b061: "大会実行委員長挨拶" }
@@ -12,10 +51,6 @@
 .ui.blue.segment.large.gallery
   h3.large.text.mt-2.mb-2
     | 第37回 伊勢湾カップ2019
-  p.lead.text
-    | 知多市長や県会議員を始めとする
-    br.mobile.only
-    | 来賓の方々をお迎えしての表彰式
 
   - %i(b001 b003 b006 b007 b030 b031 b032 b047 b052 b055 b060 b061).each do |n|
     = link_to asset_path("ceremony/#{n}.webp"), data: { group: "photo", modaal_desc: titles2[n] }, class: "photo"

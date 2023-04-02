@@ -49,6 +49,38 @@
       p.center.aligned.text
         = desc
 
+.ui.blue.segment.gallery
+  h3
+    | 第39回 伊勢湾カップ2022(抜粋)
+
+  / -[61, 64, 67, 68, 71, 73, 76, 77, 83, 87].each do |number|
+  /   - n = sprintf("%02d", number)
+  /   - desc = (number <= 60 ? "競技風景" : "表彰式")
+  /   = link_to asset_path("isewan38/#{n}.webp"), data: { group: "photo", modaal_desc: desc }, class: "photo"
+  /     = image_tag "isewan38/#{n}_s.webp", size: "320x213", alt: titles[number], loading: "lazy"
+  /     p.center.aligned.text
+  /       = desc
+  /
+
+  - t = {  t49: "伊勢湾DIV上位入賞の選手",
+           t54: "伊勢湾DIV女子表彰",
+           t60: "テクノDIV総合表彰",
+           t68: "テクノDIV女子表彰",
+           t69: "U-17 一位",
+           t70: "U-15 一位",
+        }
+
+  - (1..81).each do |number|
+    - n = sprintf("%02d", number)
+    - next if t["t#{n}".to_sym].blank?
+
+    = link_to asset_path("isewan39/#{n}.webp"), data: { group: "photo", modaal_desc: t["t#{n}".to_sym]}, class: "photo"
+      .frame
+        = image_tag "isewan39/#{n}.webp", size: "320x240", alt: t["t#{n}".to_sym], loading: "lazy"
+      p.center.aligned.text
+        = t["t#{n}".to_sym] || "#{n}.webp"
+
+
 .ui.blue.segment
   p
     | その他の写真はこちら

@@ -11,18 +11,19 @@
   p
     | 内訳は、次の通りです。
     ul
-      li 伊勢湾ＤＩＶ　(男子9名 女子5名)
-      li テクノＤＩＶ　(男子35名 女子15名)
+      li 伊勢湾ＤＩＶ　(男子11名 女子4名)
+      li ウィンドサーファークラス　(男子3名)
+      li テクノＤＩＶ　(男子30名 女子10名)
   p
     small
-      | (昨年同様ウィンドサーファークラス、テクノプラスクラスはフリーエントリーです。)
+      | (昨年同様ウィンドサーファークラスはフリーエントリーです。)
   p
     | シード選手へのご案内は、前回大会参加申込書に記載された住所に郵送します。
     br
     span.ui.red.text
       | (本年住所が変わっている方は、事務局までメールで変更後の住所を
       strong
-        | 6月20日(月)
+        | 5月31日(水)
       | までに送ってください。)
 
   .ui.styled.fluid.accordion
@@ -34,6 +35,20 @@
       table.ui.blue.table.mb-0
         tbody
           - @seeded_player[:isewan].each do |player|
+            tr
+              td
+                = player.name
+              td.right.aligned
+                = player.team.tr("_", " ")
+
+    .title
+      i.dropdown.icon
+      span.ui.blue.text
+        | ウィンドサーファークラス シード選手を見る
+    .content
+      table.ui.blue.table.mb-0
+        tbody
+          - @seeded_player[:wind].each do |player|
             tr
               td
                 = player.name

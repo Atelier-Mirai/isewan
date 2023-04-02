@@ -1,0 +1,78 @@
+section#landing
+
+  / 全画面で絵が切り替わるヒーローイメージ
+  #vegas-slider
+    = markdown('<h1 class="ui center aligned h1 header mb-0">第40回 伊勢湾カップ2023</h1>n<p class="ui center aligned h2 header mb-0">新舞子の碧い海&nbsp;<br class="mobile only">集う若人&nbsp;競う技術</p>n<p class="ui center aligned h3 header mb-0">8月5日(土)～6日(日)</p>')
+
+    .ui.text.container
+      = markdown('新舞子特有のウィンドサーフィンに最適な風を楽しみたいとの思いを共に抱く有志が集まり始まった伊勢湾カップ。草の根レースとして、今回で四〇回の記念大会を迎えることができました。出場される選手はもとより、支えてくださる全ての方々に深く感謝申し上げます。<br><br>　実行委員会一同、選手の皆さんが最高のパフォーマンスを発揮できる素晴らしい大会となるよう、準備を進めて参ります。新舞子の碧い海で皆様にお目にかかれること、楽しみに致しております。<div class="ui right aligned container"><p>令和5年4月1日<br>伊勢湾カップ実行委員会 大会会長 金光秀吉</p></div>')
+
+
+      / 今年のシード選手を発表いたしました。伊勢湾DIV一五名、ウィンドサーファークラス三名、テクノDIV四〇名です。<br><br>
+
+  / スクロールを促す為のアニメーション
+  .scroll.down
+    span
+      | Scroll
+
+javascript:
+  $('#vegas-slider').vegas({
+    overlay: true,
+    transition: 'blur',
+    transitionDuration: 2000,
+    delay: 10000,
+    animationDuration: 20000,
+    animation: 'kenburns',
+    slides: [{ src: "#{asset_path 'vegas1.webp'}"},
+             { src: "#{asset_path 'vegas2.webp'}"},
+             { src: "#{asset_path 'vegas3.webp'}"},
+             { src: "#{asset_path 'vegas4.webp'}"},
+             // { src: "#{asset_path 'vegas5.webp'}"},
+             { src: "#{asset_path 'vegas6.webp'}"}]
+  });
+
+.ui.container
+  #about.pt-68
+  .ui.aligned.grid
+    .left.floated.left.aligned.ten.wide.column
+      .ui
+        h2.ui.h2.header
+          | 伊勢湾カップとは
+
+  .ui.blue.segment.mb-0
+    = markdown("　伊勢湾カップとは、毎年夏に愛知県知多市新舞子海岸沖で行われる国内有数のウィンドサーフィンの祭典です。<br>　新舞子特有のウィンドサーフィンに最適な風を楽しみたいとの思いを共に抱く有志が集まり、昭和58年より始まりました。伊勢湾DIVやウィンドサーファークラスなどを中心に、小中学生からシニア・マスタークラスまで全国各地から多くの選手が集い、その技を競います。<br>　今年で四〇回の記念大会を迎える歴史と伝統ある草の根レースです。")
+
+  / = render 'about'
+  / = render 'notice'
+
+  / #notice.pt-68
+  / .ui.aligned.grid
+  /   .left.floated.left.aligned.six.wide.column
+  /     .ui
+  /       h2.ui.h2.header
+  /         | 新着情報
+  /
+  / table.ui.blue.table.mb-0
+  /   tbody
+  /     tr.top.aligned
+  /       td.four.wide.large.bold.text style="text-indent: 0;"
+  /         = markdown("シード選手発表")
+  /         small
+  /           time
+  /             | (04/01)
+  /             / = pretty_date("")
+  /       td.twelve.wide
+  /         | 今年のシード選手を発表いたしました。
+  /         br
+  /         | 伊勢湾DIV一五名、ウィンドサーファークラス三名、テクノDIV四〇名です。
+  /         / <a href="result.pdf" class="ui yellow button">最終成績</a>
+
+  = render "seed"
+
+  = render 'event'
+
+  / = render 'current'
+
+  = render 'award'
+  = render 'gallery'
+  / = render 'seed'
