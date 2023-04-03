@@ -19,12 +19,12 @@ table.ui.blue.table.mb-0
 
   - @preliminarys.each do |event|
     tr.top.aligned
-      td.center.aligned
+      td.center.aligned style="font-size: larger;"
         = competitions_date(event.start_date, event.end_date, event.schedule_adjustment)
-      td.center.aligned
-        = event.name
+      td.center.aligned style="font-size: midium;"
+        = event.name.html_safe
         br
-        = event.place
+        = event.place.html_safe
         br
         = decorated_url(event.nor_url, "NOR")
         / br
@@ -41,37 +41,43 @@ table.ui.blue.table.mb-0
         br
         = decorated_email(event.email)
 
-p.right.aligned.red.text
-  | 諸般の事情により昨年中止した「新舞子セレクション」は、今年は開催いたします。
+/ p.right.aligned.red.text
+/   | 諸般の事情により昨年中止した「新舞子セレクション」は、今年は開催いたします。
+
+/ 昨年中止となった「新舞子セレクション」は、今年は必ず開催いたします。
 
 
+br
 
-#regional.pt-68
-h2.ui.header.mt-0
-  | 愛知の大会
 
-table.ui.blue.table.mb-0
-  thead
-    tr.center.aligned
-      th 開催日
-      th レース名 / 場所
-      th 問い合わせ
+.ui.styled.fluid.accordion
+  .title
+    i.dropdown.icon
+    span.ui.blue.text
+      | 愛知の大会を見る
+  .content
+    table.ui.blue.table.mb-0
+      thead
+        tr.center.aligned
+          th 開催日
+          th レース名 / 場所
+          th 問い合わせ
 
-  tbody
-  - @regionals.each do |event|
-    tr.top.aligned
-      td.center.aligned
-        = competitions_date(event.start_date, event.end_date, event.schedule_adjustment)
-      td.center.aligned
-        = event.name
-        br
-        = event.place
-      td.right.aligned
-        = decorated_contact(event.contact, event.url)
-        br
-        = decorated_phone(event.phone)
-        br
-        = decorated_email(event.email)
+      tbody
+      - @regionals.each do |event|
+        tr.top.aligned
+          td.center.aligned style="font-size: larger;"
+            = competitions_date(event.start_date, event.end_date, event.schedule_adjustment)
+          td.center.aligned
+            = event.name.html_safe
+            br
+            = event.place.html_safe
+          td.right.aligned
+            = decorated_contact(event.contact, event.url)
+            br
+            = decorated_phone(event.phone)
+            br
+            = decorated_email(event.email)
 
-p.right.aligned.red.text
-  | 諸般の事情により昨年中止した「新舞子セレクション」は、今年は開催いたします。
+/ p.right.aligned.red.text
+/   | 諸般の事情により昨年中止した「新舞子セレクション」は、今年は開催いたします。

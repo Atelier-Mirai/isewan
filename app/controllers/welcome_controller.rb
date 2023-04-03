@@ -5,8 +5,8 @@ class WelcomeController < ApplicationController
     @notices = Notice.recent
 
     # @events  = Event.displayed.order(start_date: :asc)
-    @preliminarys = Event.preliminary.displayed.order(start_date: :asc)
-    @regionals    = Event.regional.displayed.order(start_date: :asc)
+    @preliminarys = Event.preliminary.displayed.order(start_date: :asc, id: :asc)
+    @regionals    = Event.regional.displayed.order(start_date: :asc, id: :asc)
 
     # @seeded_player = seeded_player
 
