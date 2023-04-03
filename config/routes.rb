@@ -7,9 +7,6 @@ Rails.application.routes.draw do
   # end
 
   root "welcome#index"
-  get  "index_pre",  to: "welcome#index_pre"
-
-
 
   # PWA
   # https://qiita.com/pham_thanh_thuong/items/f5a043f1730c3bf4bfe7
