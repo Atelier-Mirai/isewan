@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   # GET /events or /events.json
   def index
-    @events = Event.order(start_date: :asc)
+    @events = Event.order(start_date: :asc, id: :asc)
     @event = Event.new
   end
 
