@@ -72,6 +72,15 @@ br
             = event.name.html_safe
             br
             = event.place.html_safe
+            br
+            = decorated_url(event.nor_url, "NOR")
+            / br
+            = decorated_pdfs(event.nor_pdfs, "NOR")
+            / br
+            = decorated_url(event.result_url, "RESULT")
+            / br
+            = decorated_pdfs(event.result_pdfs, "RESULT")
+
           td.right.aligned
             = decorated_contact(event.contact, event.url)
             br
