@@ -36,14 +36,14 @@ html lang="ja"
     = javascript_importmap_tags
 
     / jQuery
-    script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
     / Modaal
     script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"
     / 先頭に戻る
     = javascript_include_tag "page_top", "data-turbo-track": "reload"
     / Vegas - Fullscreen Backgrounds and Slideshows.
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.css"
-    = stylesheet_link_tag "vegas_custom", "data-turbo-track": "reload"
+    / = stylesheet_link_tag "vegas_custom", "data-turbo-track": "reload"
     script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.js"
 
     = javascript_include_tag "vegas_custom", "data-turbo-track": "reload"
@@ -61,9 +61,9 @@ html lang="ja"
 
     / PWA
     / link rel="manifest" href="/manifest.json&nocache=<%= (0...50).map { ('a'..'z').to_a[rand(26)] }.join %>"
-    link rel="manifest" href="/manifest.json"
-    meta name="theme-color" content="#fef4f4"
-    meta name="apple-mobile-web-app-capable" content="yes"
+    / link rel="manifest" href="/manifest.json"
+    / meta name="theme-color" content="#fef4f4"
+    / meta name="apple-mobile-web-app-capable" content="yes"
 
   body
     = render "layouts/header"
@@ -94,12 +94,12 @@ html lang="ja"
 
 
     // PWA
-    if (navigator.serviceWorker) {
-      navigator.serviceWorker.register('/serviceworker.js', { scope: './' })
-        .then(function(reg) {
-          console.log('[Companion]', 'Service worker registered!');
-        });
-    }
+    // if (navigator.serviceWorker) {
+    //   navigator.serviceWorker.register('/serviceworker.js', { scope: './' })
+    //     .then(function(reg) {
+    //       console.log('[Companion]', 'Service worker registered!');
+    //     });
+    // }
 
   - if Rails.env.development?
     .ui.container style="margin-top: 5rem;"

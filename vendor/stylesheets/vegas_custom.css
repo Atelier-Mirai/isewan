@@ -7,6 +7,17 @@
   height: 100vh;
 }
 
+#vegas-slider .title.grid {
+  display: grid;
+  grid-template-rows: 1fr minmax(500px, 1fr) 1fr;
+  grid-template-columns: 1fr 5fr;
+}
+
+#vegas-slider .title.grid .h1 {
+  grid-row: 1;
+  grid-column: 2;
+}
+
 #vegas-slider .h1 {
   position: absolute;
   z-index: 2;
@@ -16,7 +27,6 @@
   font-size: clamp(30px, 9vw, 44px);
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  /* (小文字でも)大文字に変換する */
   width: 100%;
   line-height: 1;
 }
