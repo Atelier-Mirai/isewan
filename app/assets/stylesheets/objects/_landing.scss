@@ -9,6 +9,9 @@
   }
 
   .grid {
+    max-width: 1127px;
+    margin: 0 auto;
+
     display: grid;
     grid-template-columns: 5% minmax(22.5%,267px) minmax(67.5%,830px) 5%;
     grid-template-rows: 20vh auto auto auto auto;
