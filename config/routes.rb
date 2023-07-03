@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   #   get '/(*path)', to: redirect { |path_params,| "https://isewan-cup.org/#{path_params[:path]}" }
   # end
 
-  root "welcome#index"
+  root "welcome#index_pre"
 
-  get "index_pre", to: "welcome#index_pre"
+  # get "index_pre", to: "welcome#index_pre"
 
   # PWA
   # https://qiita.com/pham_thanh_thuong/items/f5a043f1730c3bf4bfe7
