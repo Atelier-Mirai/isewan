@@ -1,22 +1,29 @@
 section#landing
-
-  / 全画面で絵が切り替わるヒーローイメージ
   #vegas-slider
-
     .grid
       = image_tag "isewan_logo_1200x1200.png", class: "computer only mr-2"
       h1.ui.center.aligned.h1.header.mb-0
         | 第40回記念大会 伊勢湾カップ2023
       p.ui.center.aligned.h2.header.mb-0
-        | 新舞子の碧い海&nbsp;
-        br.mobile.only
-        | 集う若人&nbsp;
-        | 競う技術
+        | The Last Isewan Cup
       p.ui.center.aligned.h3.header.mb-0
         | 8月5日(土)～6日(日)
-
       .ui.text.container
-        = markdown('<br>　新舞子特有の徐々に強さを増してくるシーブリーズの中、レースを楽しみたいとの思いを共に抱く有志が集まり始まった伊勢湾カップ。大いなる草レースとして、今回で40回の記念大会を迎えることができました。出場される選手はもとより、支えてくださる全ての方々に深く感謝申し上げます。<br><br>　実行委員会一同、選手の皆さんが最高のパフォーマンスを発揮できる素晴らしい大会となるよう、準備を進めて参ります。新舞子の碧い海で皆様にお目にかかれること、楽しみに致しております。<div class="ui right aligned container"><p>令和5年4月1日<br>伊勢湾カップ実行委員会</p></div>')
+        p
+          | 新舞子特有の徐々に強さを増してくるシーブリーズの中、レースを楽しみたいとの思いを共に抱く有志が集まり始まった伊勢湾カップ。大いなる草レースとして、今回で40回の記念大会を迎えることができました。出場される選手はもとより、支えてくださる全ての方々に深く感謝申し上げます。
+        p
+          span style="font-size: 1.25rem;"
+            | 全国有数のウィンドサーフィンの祭典
+
+          | として、毎年夏に開催して参りましたが、猛暑による熱中症など選手の安全を第一に考え、また新舞子の陸側や海の状況等により、大変残念ではありますが、この第40回記念大会を以て幕引と致します。
+        p
+          | 実行委員会一同、選手の皆さんが最高のパフォーマンスを発揮できる素晴らしい大会となるよう、準備を進めて参ります。新舞子の碧い海で皆様にお目にかかれること、楽しみに致しております。
+
+        .kaicho.ui.right.aligned.container
+          p style="width: 250px; text-align: left; margin-bottom: 0; text-indent: 0;"
+            | 令和5年7月1日
+          p style="width: 250px; text-align: left; margin-bottom: 0; text-indent: 0; font-size: 1.25rem;"
+            | 伊勢湾カップ大会会長 神谷 至
 
   / スクロールを促す為のアニメーション
   .scroll.down
@@ -38,18 +45,6 @@ javascript:
              // { src: "#{asset_path 'vegas5.webp'}"},
              { src: "#{asset_path 'vegas6.webp'}"}]
   });
-
-.ui.container
-  #about.pt-68
-  .ui.aligned.grid
-    .left.floated.left.aligned.ten.wide.column
-      .ui
-        h2.ui.h2.header
-          | 伊勢湾カップとは
-
-  .ui.blue.segment.mb-0
-    = markdown("　伊勢湾カップとは、毎年夏に愛知県知多市新舞子海岸沖で行われる国内有数のウィンドサーフィンの祭典です。<br>　新舞子特有の徐々に強さを増してくるシーブリーズの中、レースを楽しみたいとの思いを共に抱く有志が集まり、昭和58年より始まりました。<br>　伊勢湾DIVやテクノクラス、ウィンドサーファークラスなどを中心に、小中学生からシニア・マスタークラスまで、プロアマ年齢性別を問わずをモットーに、純粋にレースを楽しみたい多くの選手が全国各地から集い、その技を競います。<br>　本年は第40回記念大会として、往年の名艇をお持ちの方にも出場していただけるよう、セールエリア9.0㎡以下、ボード自由のオープンクラスを設ける予定です。新舞子のシーブリーズに抱かれ、歴史と伝統ある大いなる草レースにご参加下さい。")
-    / = markdown("　伊勢湾カップとは、毎年夏に愛知県知多市新舞子海岸沖で行われる国内有数のウィンドサーフィンの祭典です。<br>　新舞子特有の徐々に強さを増してくるシーブリーズの中、レースを楽しみたいとの思いを共に抱く有志が集まり、昭和58年より始まりました。<br>　伊勢湾DIVやテクノクラス、ウィンドサーファークラスなどを中心に、小中学生からシニア・マスタークラスまで、プロアマ年齢性別を問わずをモットーに、純粋にレースを楽しみたい多くの選手が全国各地から集い、その技を競います。<br>　今年で40回の記念大会を迎える歴史と伝統ある大いなる草レースです。<br>　本年は40年の歴史の中で、セールエリア9.0㎡以下、ボード自由のオープンクラスを設ける予定です。往年の名艇を持っている方はそれでご参加いただけるようにしたいと思います。")
 
 .ui.container
   #about.pt-68
@@ -109,41 +104,34 @@ javascript:
             p
               | 伊勢湾カップ実行委員会
 
+.ui.container
+  #about.pt-68
+  .ui.aligned.grid
+    .left.floated.left.aligned.ten.wide.column
+      .ui
+        h2.ui.h2.header
+          | 伊勢湾カップとは
 
+  .ui.blue.segment.mb-0
+    = markdown("　伊勢湾カップとは、毎年夏に愛知県知多市新舞子海岸沖で行われる国内有数のウィンドサーフィンの祭典です。<br>　新舞子特有の徐々に強さを増してくるシーブリーズの中、レースを楽しみたいとの思いを共に抱く有志が集まり、昭和58年より始まりました。<br>　伊勢湾DIVやテクノクラス、ウィンドサーファークラスなどを中心に、小中学生からシニア・マスタークラスまで、プロアマ年齢性別を問わずをモットーに、純粋にレースを楽しみたい多くの選手が全国各地から集い、その技を競います。<br>　本年は第40回記念大会として、往年の名艇をお持ちの方にも出場していただけるよう、セールエリア9.0㎡以下、ボード自由のオープンクラスを設ける予定です。新舞子のシーブリーズに抱かれ、歴史と伝統ある大いなる草レースにご参加下さい。")
 
+.ui.container
+  .pt-68
+  .ui.aligned.grid
+    .left.floated.left.aligned.ten.wide.column
+      .ui
+        h2.ui.h2.header
+          | レース公示(NOR)
 
-
-  / = render 'about'
-  = render 'notice'
-
-  / #notice.pt-68
-  / .ui.aligned.grid
-  /   .left.floated.left.aligned.six.wide.column
-  /     .ui
-  /       h2.ui.h2.header
-  /         | 新着情報
-  /
-  / table.ui.blue.table.mb-0
-  /   tbody
-  /     tr.top.aligned
-  /       td.four.wide.large.bold.text style="text-indent: 0;"
-  /         = markdown("シード選手発表")
-  /         small
-  /           time
-  /             | (04/01)
-  /             / = pretty_date("")
-  /       td.twelve.wide
-  /         | 今年のシード選手を発表いたしました。
-  /         br
-  /         | 伊勢湾DIV一五名、ウィンドサーファークラス三名、テクノDIV四〇名です。
-  /         / <a href="result.pdf" class="ui yellow button">最終成績</a>
-
-  = render "seed"
-
-  = render 'event'
-
-  / = render 'current'
+  .ui.blue.segment.mb-0
+    p
+      | 第40回記念大会 伊勢湾カップ2023 の
+      = link_to "レース公示(NOR)", "https://isewan-cup.org/nor.pdf"
+      | です。
+    p
+      | シード選手、各地の予選通過者は、郵送した参加申込書にて事務局へお申し込み下さい。
+    p
+      | ウィンドサーファークラス、オープンクラスへ参加希望の方は、レース公示(NOR)の参加申込書を印刷し、お使いください。
 
   = render 'award'
   = render 'gallery'
-  / = render 'seed'

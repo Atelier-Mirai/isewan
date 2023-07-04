@@ -68,6 +68,11 @@
     padding-right: 30px;
   }
 
+  .kaicho {
+    margin-left: calc(680px - 240px);
+    margin-right: 1em;
+  }
+
   p {
     text-indent: 1em;
     color: black;
@@ -87,6 +92,9 @@
         padding-right: 10px;
         letter-spacing: 1px;
         font-size: clamp(24px, 7vw, 36px);
+      }
+      .kaicho {
+        margin-left: calc(86vw - 240px);
       }
       .ui.text.container { margin-top: 15px; }
     }
