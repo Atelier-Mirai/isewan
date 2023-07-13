@@ -28,12 +28,18 @@
   }
 
   .h1 {
-    color: transparent;
-    background: linear-gradient(90deg, #a38131 0%, #e7c76d 33%, #ffe6c5 62%, #e3c05d 83%, #9d874e 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
+    // color: transparent;
+    // background: linear-gradient(90deg, #a38131 0%, #e7c76d 33%, #ffe6c5 62%, #e3c05d 83%, #9d874e 100%);
+    // -webkit-background-clip: text;
+    // background-clip: text;
+
+    color: navy;
+
     font-weight: bold;
-    text-shadow: 0 0 10px #ffe6c5;
+    text-shadow:
+                  3px 3px 5px #ffe6c5, -3px -3px 5px #ffe6c5,
+                 -3px 3px 5px #ffe6c5,  3px -3px 5px #ffe6c5;
+
     word-break: keep-all;
     font-size: clamp(30px, 9vw, 44px);
     letter-spacing: 0.2em;
