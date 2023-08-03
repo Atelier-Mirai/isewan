@@ -104,6 +104,33 @@ javascript:
             p
               | 伊勢湾カップ実行委員会
 
+/ css:
+/   .column2 {
+/     @media (width <= 480px) {
+/       column-count: 1;
+/     }
+/     @media (width > 480px) {
+/       column-count: 2;
+/     }
+/   }
+
+.ui.container
+  #about.pt-68
+  .ui.aligned.grid
+    .left.floated.left.aligned.ten.wide.column
+      .ui
+        h2.ui.h2.yellow.header
+          = link_to "日本におけるウインドサーフィンの歴史と発展", "https://www.jstage.jst.go.jp/article/jjls/14/2/14_1/_pdf/-char/en"
+
+  .ui.yellow.segment.mb-0
+    p.lead.text.mb-2
+      / | 名桜大学教授 平野貴也ら による
+      / = link_to "日本におけるウインドサーフィンの普及過程と普及戦略", "https://www.jstage.jst.go.jp/article/jjls/14/2/14_1/_pdf/-char/en"
+      / | より
+
+    = render "history"
+
+
 .ui.container
   #about.pt-68
   .ui.aligned.grid
