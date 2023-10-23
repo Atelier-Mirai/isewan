@@ -1,0 +1,71 @@
+.ui.container
+
+  #award.pt-68
+  .ui.aligned.grid
+    .left.floated.left.aligned.six.wide.column
+      .ui
+        h2.ui.h2.header
+          | 40枚の写真で振り返る 伊勢湾カップ2023
+
+  .ui.blue.segment.large.gallery
+    h3.large.text.mt-2.mb-2
+      | 第40回記念大会 伊勢湾カップ2023
+    p.lead.text
+      | 知多フリートに始まる歴史と伝統に共感・賛同する参加選手とともに、知多市長や県会議員を始めとする来賓の方々をお迎えし、第40回記念大会が開かれました。
+
+    - photos = {  IMG_6736: "第40回記念大会",
+                  IMG_6741: "開会式 大会会長",
+                  IMG_6745: "開会式 大会会長",
+                  IMG_6778: "一斉スタート",
+                  IMG_6781: "一斉スタート",
+                  IMG_6786: "伊勢湾女子優勝 小嶺選手",
+                  IMG_6790: "総合三位 廣津選手",
+                  IMG_6805: "静岡より参加の市川選手",
+                  IMG_6808: "知多フリート 金光選手",
+                  IMG_6853: "熊本より参加の川端選手",
+                  IMG_6864: "一斉スタート",
+                  IMG_6878: "総合二位 福村選手",
+                  IMG_6879: "総合優勝 黒石選手",
+                  IMG_6880: "総合優勝 黒石選手",
+                  IMG_6882: "ウィンドサーファークラス優勝 作野選手",
+                  IMG_6886: "競技中の一幕",
+                  IMG_6894: "テクノDIV U-15 田中選手",
+                  IMG_6908: "一斉スタート",
+                  IMG_6917: "競技風景",
+                  IMG_6921: "競技風景",
+                  IMG_6934: "山口より参加の鳥取選手",
+                  IMG_6935: "知多フリート 金光選手",
+                  IMG_6944: "ウィンドサーファークラス 吉岡選手",
+                  IMG_6978: "栄光の優勝カップと盾",
+                  IMG_6994: "総合優勝 黒石選手",
+                  IMG_7018: "女子の部表彰式",
+                  IMG_7025: "マスターズ表彰式",
+                  IMG_7027: "盾を掲げて笑顔の黒石選手",
+                  IMG_7029: "カップを授与される小嶺選手",
+                  IMG_7031: "ウィンドサーファークラス表彰",
+                  IMG_7032: "ウィンドサーファークラス表彰",
+                  IMG_7036: "テクノDIV表彰",
+                  IMG_7037: "テクノDIV U-15優勝 梶村選手",
+                  IMG_7048: "表彰式 県会議員",
+                  IMG_7054: "表彰式 大会会長",
+                  IMG_7057: "表彰式 大会会長",
+                  IMG_7100: "表彰式 大会会長",
+                  IMG_7101: "表彰式 知多副市長",
+                  IMG_7102: "表彰式 知多市観光協会",
+                  IMG_7202: "集合写真"}
+
+    - photos.each do |filename, title|
+      = link_to asset_path("isewan40_highlight/#{filename}.webp"), data: { group: "photo", modaal_desc: title} , class: "photo"
+        .frame
+          = image_tag "isewan40_highlight/#{filename}.webp", size: "320x240", alt: title, loading: "lazy"
+        p.center.aligned.text
+          = title
+
+
+- poster_file = asset_path("isewan40_highlight/IMG_7202.webp")
+- movie_file  = asset_path("isewan40_highlight/isewan40.mp4")
+
+.ui.container
+  #video_area
+    video#video poster="#{poster_file}" controls="" style="width: 100%;"
+      source src="#{movie_file}" type="video/mp4"

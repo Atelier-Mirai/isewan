@@ -1,0 +1,11 @@
+#video_area {
+  background-image: url("gold3.jpg") !important;
+  filter: brightness(105%);
+  margin-top: 2rem;
+
+  video {
+    width: 100%;
+    padding: 1rem;
+  }
+
+}

@@ -91,6 +91,8 @@ Link.create(url: 'https://photos.app.goo.gl/wBY5KPXsQZyUcmM38', text: '2021年�
 
 Link.create(url: 'https://photos.app.goo.gl/Rmwt5SEYhwkm5YYA6', text: '2022年大会', times_held: 39, rank: 1, created_at: '2022-08-31 02:10:32 +0900', updated_at: '2022-08-31 02:10:32 +0900')
 
+Link.create(id: 16, url: "https://photos.app.goo.gl/VbJ5UYsoh9zncNDc9", text: "2023年大会", times_held: 40, rank: 1, created_at: '2023-08-31 02:10:32 +0900', updated_at: '2023-08-31 02:10:32 +0900')
+
 Winner.create(times: '1', isewan: '岩橋　修', tech: '', created_at: '2022-08-31 02:11:10 +0900', updated_at: '2022-08-31 02:11:10 +0900')
 Winner.create(times: '2', isewan: '佐藤　務', tech: '', created_at: '2022-08-31 02:11:10 +0900', updated_at: '2022-08-31 02:11:10 +0900')
 Winner.create(times: '3', isewan: '佐藤　務', tech: '', created_at: '2022-08-31 02:11:10 +0900', updated_at: '2022-08-31 02:11:10 +0900')

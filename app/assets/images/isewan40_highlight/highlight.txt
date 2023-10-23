@@ -1,0 +1,53 @@
+#award.pt-68
+  .ui.aligned.grid
+    .left.floated.left.aligned.six.wide.column
+      .ui
+        h2.ui.h2.header
+          | 40枚の写真で振り返る 伊勢湾カップ2023
+
+  .ui.blue.segment.large.gallery
+    h3.large.text.mt-2.mb-2
+      | 第40回記念大会 伊勢湾カップ2023
+    p.lead.text
+      | 知多フリートに始まる歴史と伝統に共感・賛同する参加選手とともに、知多市長や県会議員を始めとする来賓の方々をお迎えし、第40回記念大会が開かれました。
+
+
+
+    - photos.each do |number, title|
+      = link_to asset_path("isewan40_highlight/IMG_#{number}.webp"), data: { group: "photo", modaal_desc: title, class: "photo"
+        .frame
+          = image_tag "isewan40_highlight/IMG_#{number}.webp", size: "320x240", alt: title, loading: "lazy"
+        p.center.aligned.text
+          = title
+
+.ui.aligned.grid.pt-68
+  .left.floated.left.aligned.six.wide.column
+    .ui
+      h2.ui.h2.header
+        | 歴代優勝者
+      p
+        | 第一回大会からの栄光ある歴代優勝者の方々です。
+        small
+          | () 内は大会回数
+
+.ui.blue.segment.winners
+  h3.large.text.mt-2.mb-2 伊勢湾DIV 歴代優勝者
+  - @winners.each do |winner|
+    - klass = (winner.isewan == "クリスローレンス" ? "medium" : "large")
+    p.center.aligned class="#{klass} text mb-0"
+      = "#{winner.isewan}"
+      small
+        = "(#{winner.times})"
+
+.ui.blue.segment.winners
+  h3.large.text.mt-2.mb-2 テクノDIV 歴代優勝者
+  - @winners.each do |winner|
+    - if winner.tech.present?
+      p.center.aligned.large.text.mb-0
+        = "#{winner.tech}"
+        small
+          = "(#{winner.times})"
+
+p.right.aligned.text
+  small
+    | (敬称略)

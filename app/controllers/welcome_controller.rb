@@ -15,7 +15,7 @@ class WelcomeController < ApplicationController
     @links = Link.all.order(times_held: :desc, rank: :asc)
   end
 
-  def index_pre
+  def prerelease
     @landing = '<h1 class=\"ui center aligned h1 header mb-0\">伊勢湾カップ 2022</h1>\n<p class=\"ui center aligned h2 header mb-0\">新舞子の碧い海&nbsp;<br class=\"mobile only\">集う若人&nbsp;競う技術</p>\n<p class=\"ui center aligned h3 header mb-0\">8月6日(土)～7日(日)</p>'
 
     @about   = About.recent.first
